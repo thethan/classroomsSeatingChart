@@ -22,8 +22,17 @@ Route::get('/', function () {
 
 
 //Put under Middleware
-Route::resource('/classrooms','Classrooms');
+Route::group(['prefix' => 'admin'], function(){
+    Route::resource('/classrooms','Classrooms');
+    Route::resource('/tables','TablesController');
+    Route::resource('/seats', 'SeatsController');
+    Route::get('/tables/{tableId}/seats', 'TablesController@seats');
+});
 
 Route::group(['prefix' => 'api'], function (){
     Route::resource('/classrooms','Json\ClassroomController');
+    Route::resource('/tables','Json\TablesController');
+    Route::resource('/seats','Json\SeatsController');
 });
+
+

@@ -1,20 +1,19 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Json;
 
-use App\Classroom;
-use App\Jobs\ClassroomFormFields;
+use App\Table;
+use App\Jobs\TableFormFields;
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use App\Http\Requests\ClassroomRequest;
+use App\Http\Requests\TablesRequest;
 use App\Http\Controllers\Controller;
 
-class Classrooms extends Controller
+class TablesController extends Controller
 {
     protected $fields =
         [
-            'teachername' => '',
-            'grade' => '',
+            'color' => '',
         ];
     /**
      * Display a listing of the resource.
@@ -23,7 +22,9 @@ class Classrooms extends Controller
      */
     public function index()
     {
-        return view('admin.classrooms.index');
+        $return = Table::all();
+
+        return response()->json(['data' => $return]);
     }
 
     /**
@@ -33,10 +34,10 @@ class Classrooms extends Controller
      */
     public function create()
     {
-        $data = $this->dispatch(new ClassroomFormFields());
+        $data = $this->dispatch(new TableFormFields());
 
 
-        return view('admin.classrooms.create', $data);
+        return view('admin.tables.create', $data);
 
     }
 
@@ -46,7 +47,7 @@ class Classrooms extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ClassroomRequest $request)
+    public function store(TablesRequest $request)
     {
         $classroom = new Classroom();
         foreach(array_keys($this->fields) as $field)
@@ -81,7 +82,7 @@ class Classrooms extends Controller
     {
         $data = $this->dispatch(new ClassroomFormFields($id));
 
-        return view('admin.classrooms.edit', $data);
+        return view('admin.classrooms.create', $data);
 
 
     }

@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers\Json;
 
-use App\Classroom;
+use App\Seat;
+use App\Table;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class ClassroomController extends Controller
+class SeatsController extends Controller
 {
     protected $fields =
         [
-          'teachername' => '',
-            'grade' => '',
+          'number' => '',
         ];
     /**
      * Display a listing of the resource.
@@ -22,7 +22,13 @@ class ClassroomController extends Controller
     public function index()
     {
 
-        $return = Classroom::all();
+        $seat = new Seat();
+        $seats = $seat->all();
+        foreach($seats as $key => $value)
+        {
+            $value['table'] = $value->table;
+            $return[$key] =$value;
+        }
 
         return response()->json(['data' => $return]);
     }
@@ -54,9 +60,13 @@ class ClassroomController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($tableId)
     {
-        //
+        $table = Table::find($tableId);
+
+        $return = $table->seats;
+
+        return response()->json(['data' => $return]);
     }
 
     /**

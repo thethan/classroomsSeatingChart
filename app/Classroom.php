@@ -12,4 +12,14 @@ class Classroom extends Model
     protected $table = 'classrooms';
 
 
+    public function grades()
+    {
+        return $this->grades;
+    }
+
+    public function seatingChart()
+    {
+        return $this->hasOne('seating_chart');
+    }
+
 }

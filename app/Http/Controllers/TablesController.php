@@ -2,19 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Classroom;
-use App\Jobs\ClassroomFormFields;
+use App\Table;
+use App\Jobs\TableFormFields;
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use App\Http\Requests\ClassroomRequest;
-use App\Http\Controllers\Controller;
+use App\Http\Requests\TablesRequest;
 
-class Classrooms extends Controller
+class TablesController extends Controller
 {
     protected $fields =
         [
-            'teachername' => '',
-            'grade' => '',
+            'color' => '',
         ];
     /**
      * Display a listing of the resource.
@@ -23,7 +21,7 @@ class Classrooms extends Controller
      */
     public function index()
     {
-        return view('admin.classrooms.index');
+        return view('admin.tables.index');
     }
 
     /**
@@ -33,10 +31,10 @@ class Classrooms extends Controller
      */
     public function create()
     {
-        $data = $this->dispatch(new ClassroomFormFields());
+        $data = $this->dispatch(new TableFormFields());
 
 
-        return view('admin.classrooms.create', $data);
+        return view('admin.tables.create', $data);
 
     }
 
@@ -46,17 +44,17 @@ class Classrooms extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ClassroomRequest $request)
+    public function store(TablesRequest $request)
     {
-        $classroom = new Classroom();
+        $table = new Table();
         foreach(array_keys($this->fields) as $field)
         {
-            $classroom->$field = $request->get($field);
+            $table->$field = $request->get($field);
         }
-        $classroom->save();
+        $table->save();
 
-        return redirect('/admin/classrooms')
-            ->withSuccess("The tag '$classroom->teachername' '$classroom->grade' was created");
+        return redirect('/admin/tables')
+            ->withSuccess("The tag '$table->color'  was created");
 
     }
 
@@ -79,9 +77,9 @@ class Classrooms extends Controller
      */
     public function edit($id)
     {
-        $data = $this->dispatch(new ClassroomFormFields($id));
+        $data = $this->dispatch(new TableFormFields($id));
 
-        return view('admin.classrooms.edit', $data);
+        return view('admin.tables.edit', $data);
 
 
     }
@@ -95,15 +93,15 @@ class Classrooms extends Controller
      */
     public function update(Request $request, $id)
     {
-        $classroom = Classroom::findOrNew($id);
+        $table = Table::findOrNew($id);
         foreach(array_keys($this->fields) as $field)
         {
-            $classroom->$field = $request->get($field);
+            $table->$field = $request->get($field);
         }
-        $classroom->save();
+        $table->save();
 
-        return redirect('/admin/classrooms')
-            ->withSuccess("The tag '$classroom->teachername' '$classroom->grade' was created");
+        return redirect('/admin/tables')
+            ->withSuccess("The table '$table->color'  was created");
 
     }
 
@@ -115,10 +113,20 @@ class Classrooms extends Controller
      */
     public function destroy($id)
     {
-        $classroom = Classroom::findOrFail($id);
-        $classroom->delete();
+        $table = Table::findOrFail($id);
+        $table->delete();
 
-        return redirect('/admin/classrooms')
-            ->withSuccess("The classroom '$classroom->teachername $classroom->grade' has been deleted.");
+        return redirect('/admin/tables')
+            ->withSuccess("The table '$table->color' has been deleted.");
+    }
+
+    public function seats($tableId)
+    {
+
+        $data = $this->dispatch(new TableFormFields($tableId));
+
+        return view('admin.seats.index', $data)
+            ->with('table_id' , $tableId);
+
     }
 }

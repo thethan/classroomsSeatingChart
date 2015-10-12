@@ -26,3 +26,10 @@ $factory->define(App\Classroom::class, function (Faker\Generator $faker) {
         'grade' => array_rand([1,2,3,4,5,6,7,8,9,10,'K','TK']),
     ];
 });
+
+$factory->define(App\Table::class, function (Faker\Generator $faker) {
+    return [
+        'color' => $faker->name,
+        'grade' => array_rand([1,2,3,4,5,6,7,8,9,10,'K','TK']),
+    ];
+});

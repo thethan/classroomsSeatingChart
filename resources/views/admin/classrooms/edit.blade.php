@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-    {!! Form::open(array('action' => 'Classrooms@store','method'=>'POST', 'class' => 'form-horizontal')) !!}
+    {!! Form::open(array('action' => array('Classrooms@update', $id),'method'=>'PUT', 'class' => 'form-horizontal')) !!}
         @include('admin.classrooms._form')
     {!! Form::close() !!}
     @endsection

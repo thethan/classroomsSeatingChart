@@ -3,22 +3,20 @@
 @section('content')
     <div class="row">
         <div class="col-sm-12">
-            <a href="create" class="btn btn-primary pull-right">Create Classroom</a>
+            <a href="create" class="btn btn-primary pull-right">Create Table</a>
         </div>
     </div>
-    <table id="classrooms">
+    <table id="tables">
         <thead>
         <tr>
             <th>Id</th>
-            <th>Name</th>
-            <th>Grade</th>
-            <th>Created</th>
+            <th>Number</th>
+            <th>Table</th>
             <th>Action</th>
         </tr>
         </thead>
         <tbody>
         <tr>
-            <td>Acy</td>
         </tr>
         </tbody>
     </table>
@@ -31,12 +29,12 @@
                                 aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title" id="exampleModalLabel">New message</h4>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body row">
 
                     <button type="button" class="btn btn-default " data-dismiss="modal">Cancel</button>
-                    {!! Form::open(array('class' => 'form-inline', 'id' => 'deleteClassroom', 'method' => 'DELETE', 'route' => array('admin.classrooms.destroy'))) !!}
+                    {!! Form::open(array('class' => 'form-inline', 'id' => 'deleteTable', 'method' => 'DELETE', 'route' => array('admin.tables.destroy'))) !!}
 
-                        {!! Form::submit('Delete', array('class' => 'btn btn-danger')) !!}+
+                        {!! Form::submit('Delete', array('class' => 'btn btn-danger pull-right')) !!}
 
                     {!! Form::close() !!}
                 </div>
@@ -55,16 +53,19 @@
 
 @section("scripts")
     <script>
-        var table = $('#classrooms').DataTable({
+        var table = $('#tables').DataTable({
             ajax: {
-                "url": "/api/classrooms",
+                @if($table_id)
+                    "url": "/api/seats/" + "{{$table_id}}",
+                @else
+                     "url": "/api/seats",
+                @endif
 
             },
             "columns": [
                 {"data": "id"},
-                {"data": "teachername"},
-                {"data": "grade"},
-                {"data": "created_at"},
+                {"data": "number"},
+                {"data": "table.color"},
 
             ],
             "columnDefs": [
@@ -74,7 +75,7 @@
                     "searchable": false,
                     "searchable": false,
                 }, {
-                    "targets": [4],
+                    "targets": [3],
 
                     "defaultContent": "<button type='button' class='btn btn-primary col-xs-4 edit' >Edit</button>"+
                     "<button type='button' class='btn btn-danger col-sm-offset-2 delete'  data-whatever='Title'>Delete</button>",
@@ -82,20 +83,22 @@
             ]
         });
 
-        $('#classrooms tbody').on('click', 'button.edit', function () {
+        $('#tables tbody').on('click', 'button.edit', function () {
+
             var data = table.row($(this).parents('tr')).data();
             console.log(data);
-            window.location.href = '/admin/classrooms/' + data.id + '/edit';
+            window.location.href = '/admin/tables/' + data.id + '/edit';
         });
 
-        $('#classrooms tbody').on('click', '.delete', function () {
+
+        $('#tables tbody').on('click', '.delete', function () {
             var data = table.row($(this).parents('tr')).data();
             // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
             // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
             var modal = $('#deleteModal');
             console.log(data);
-            modal.find('.modal-title').text('Do you want to delete classroom: ' + data.teachername +' '+ data.grade+ '?')
-            modal.find('#deleteClassroom').attr('action', '/admin/classrooms/'+data.id)
+            modal.find('.modal-title').text('Do you want to delete Table: ' + data.color + '?')
+            modal.find('#deleteTable').attr('action', '/admin/tables/'+data.id)
             $('#deleteModal').modal('show');
         })
 

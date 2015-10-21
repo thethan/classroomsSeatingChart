@@ -120,10 +120,12 @@ class TablesController extends Controller
             ->withSuccess("The table '$table->color' has been deleted.");
     }
 
+
     public function seats($tableId)
     {
 
         $data = $this->dispatch(new TableFormFields($tableId));
+        $table = Table::find($tableId);
 
         return view('admin.seats.index', $data)
             ->with('table_id' , $tableId);

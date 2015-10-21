@@ -1,36 +1,24 @@
 <?php
 
-namespace App\Http\Controllers\Json;
+namespace App\Http\Controllers;
 
-use App\Seat;
-use App\Table;
 use Illuminate\Http\Request;
 use App\Http\Requests;
+use App\Jobs\ClassroomFormFields;
 use App\Http\Controllers\Controller;
 
-class SeatsController extends Controller
+class StudentsController extends Controller
 {
-    protected $fields =
-        [
-          'number' => '',
-        ];
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($classroomId)
     {
+        $data = $this->dispatch(new ClassroomFormFields($classroomId));
 
-        $seat = new Seat();
-        $seats = $seat->all();
-        foreach($seats as $key => $value)
-        {
-            $value['table'] = $value->table;
-            $return[$key] =$value;
-        }
-
-        return response()->json(['data' => $return]);
+        return view('students.index', $data);
     }
 
     /**
@@ -60,21 +48,9 @@ class SeatsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($tableId)
+    public function show($id)
     {
-        $return = [];
-        $tableName = $_GET['table'];
-        $table = Table::find($tableId);
-        $seats = $table->seats;
-
-        foreach($seats as $seat)
-        {
-            $seat->table_id = $tableName;
-            $return[] = $seat;
-        }
-
-
-        return response()->json(['data' => $return]);
+        //
     }
 
     /**

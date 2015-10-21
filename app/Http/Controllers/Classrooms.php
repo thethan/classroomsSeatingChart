@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Classroom;
 use App\Jobs\ClassroomFormFields;
+use App\Jobs\SeatingChartCreator;
+use App\Jobs\StudentArray;
+use App\Student;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Requests\ClassroomRequest;
@@ -120,5 +123,23 @@ class Classrooms extends Controller
 
         return redirect('/admin/classrooms')
             ->withSuccess("The classroom '$classroom->teachername $classroom->grade' has been deleted.");
+    }
+
+
+
+
+    public function assignSeatingChart($classroomId)
+    {
+        $data = $this->dispatch(new SeatingChartCreator($classroomId));
+
+        $classroom = Classroom::find($classroomId);
+
+        $students = $this->dispatch(new StudentArray($classroomId));
+
+        var_dump($students);
+
+        return view('admin.seatingchart.index')
+            ->with('chart', $data)
+            ->with('students', $students);
     }
 }

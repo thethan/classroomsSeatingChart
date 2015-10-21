@@ -33,3 +33,11 @@ $factory->define(App\Table::class, function (Faker\Generator $faker) {
         'grade' => array_rand([1,2,3,4,5,6,7,8,9,10,'K','TK']),
     ];
 });
+
+$factory->define(App\Student::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->name,
+        'classroom_id' => 1,
+        'seat_id' => null
+    ];
+});

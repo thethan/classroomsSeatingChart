@@ -20,6 +20,7 @@ Route::get('/', function () {
 //    return view('admin.classrooms.index');
 //});
 
+Route::get('assign/{classroomId}', 'Classrooms@assignSeatingChart');
 
 //Put under Middleware
 Route::group(['prefix' => 'admin'], function(){

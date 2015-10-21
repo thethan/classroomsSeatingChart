@@ -11,6 +11,8 @@ class Classroom extends Model
     //
     protected $table = 'classrooms';
 
+    public $roster;
+
 
     public function grades()
     {
@@ -19,7 +21,26 @@ class Classroom extends Model
 
     public function seatingChart()
     {
-        return $this->hasOne('seating_chart');
+        return $this->hasOne('App\SeatingChart');
+    }
+
+    public function students()
+    {
+        return $this->hasMany('App\Student');
+    }
+
+    public function studentSeats()
+    {
+        $return = array();
+        $students = $this->students();
+        foreach($students as $student)
+        {
+            var_dump($student);
+
+            $return[$student->id] = $student->seat;
+        }
+
+        $this->roster = $return;
     }
 
 }

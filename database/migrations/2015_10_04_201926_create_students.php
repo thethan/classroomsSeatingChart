@@ -17,10 +17,15 @@ class CreateStudents extends Migration
             $table->increments('id');
             $table->string('name');
             $table->integer('classroom_id');
+            $table->integer('seat_id')->nullable();
             $table->timestamps();
 
             $table->foreign('classroom_id')
                 ->references('id')->on('classrooms')
+                ->onDelete('cascade');
+
+            $table->foreign('seat_id')
+                ->references('id')->on('seats')
                 ->onDelete('cascade');
         });
     }

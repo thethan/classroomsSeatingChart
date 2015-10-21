@@ -3,7 +3,7 @@
 @section('content')
     <div class="row">
         <div class="col-sm-12">
-            <a href="create" class="btn btn-primary pull-right">Create Classroom</a>
+            <a href="{{url('/admin/classrooms/create') }}" class="btn btn-primary pull-right">Create Classroom</a>
         </div>
     </div>
     <table id="classrooms">

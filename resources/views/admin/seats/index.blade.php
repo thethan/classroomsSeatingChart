@@ -6,6 +6,7 @@
             <a href="create" class="btn btn-primary pull-right">Create Table</a>
         </div>
     </div>
+    <h2>{{ $color }}</h2>
     <table id="tables">
         <thead>
         <tr>
@@ -55,17 +56,28 @@
     <script>
         var table = $('#tables').DataTable({
             ajax: {
+
                 @if($table_id)
                     "url": "/api/seats/" + "{{$table_id}}",
+
                 @else
                      "url": "/api/seats",
                 @endif
+
+                    // d.custom = $('#myInput').val();
+                    // etc
+                "data": function ( d ) {
+                    d.table = "{{ $color }}";
+
+
+                },
 
             },
             "columns": [
                 {"data": "id"},
                 {"data": "number"},
-                {"data": "table.color"},
+                {"data": "table_id"},
+
 
             ],
             "columnDefs": [

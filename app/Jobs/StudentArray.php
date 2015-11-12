@@ -17,8 +17,6 @@ class StudentArray extends Job implements SelfHandling
     public function __construct($id = null)
     {
 
-
-
         $this->classroom_id = $id;
 
     }
@@ -39,6 +37,7 @@ class StudentArray extends Job implements SelfHandling
         foreach($students as $student){
             $return[$student->id] = $student->name;
         }
+
 
         return $return;
     }

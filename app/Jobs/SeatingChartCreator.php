@@ -50,6 +50,7 @@ class SeatingChartCreator extends Job implements SelfHandling
 
         $seatingchart->getChart($students);
 
+
         return $seatingchart->chart;
     }
 }

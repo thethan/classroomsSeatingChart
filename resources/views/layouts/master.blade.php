@@ -10,7 +10,7 @@
 
     {{--<script src="{{ elixir('js/app.js') }}"></script>--}}
 </head>
-<body>
+<body ng-app="classroom">
 @include('admin.partials.navbar')
 <div class="container-fluid">
     @include('admin.partials.errors')

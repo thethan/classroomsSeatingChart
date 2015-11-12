@@ -136,9 +136,8 @@ class Classrooms extends Controller
 
         $students = $this->dispatch(new StudentArray($classroomId));
 
-        var_dump($students);
-
         return view('admin.seatingchart.index')
+            ->with('classroomId', $classroomId)
             ->with('chart', $data)
             ->with('students', $students);
     }

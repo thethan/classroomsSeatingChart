@@ -6,6 +6,8 @@ use App\Classroom;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Jobs\SeatingChartCreator;
+use App\Jobs\StudentArray;
 
 class ClassroomController extends Controller
 {
@@ -91,5 +93,28 @@ class ClassroomController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    /**
+     * @param $classroomId
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function assign($classroomId)
+    {
+        $data = $this->dispatch(new SeatingChartCreator($classroomId));
+
+        return response((array)$data);
+    }
+
+    /**
+     * @param $classroomId
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function students($classroomId)
+    {
+        $students = $this->dispatch(new StudentArray($classroomId));
+
+
+        return response((array)$students, 200);
     }
 }

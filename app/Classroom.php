@@ -33,9 +33,9 @@ class Classroom extends Model
     {
         $return = array();
         $students = $this->students();
+
         foreach($students as $student)
         {
-            var_dump($student);
 
             $return[$student->id] = $student->seat;
         }

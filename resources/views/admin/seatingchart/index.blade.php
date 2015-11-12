@@ -1,118 +1,406 @@
-@extends('layouts.master')
+@extends('layouts.material')
 
 @section('content')
-    <div id="materials-table">
-        <h3>Material Table</h3>
-    </div>
-    <section id="classroom">
-        @foreach($chart as $table => $seats)
-            <div class="table {{ $table }}">
-                @foreach($seats as $seat)
-                    @if(array_key_exists($seat, $students))
-                        <div onclick="marks($seat)">
-                            {{ $students[$seat] }}
-                        </div>
-                    @else
-                        <div onclick="fillSeat()">
 
-                        </div>
-                    @endif
-                @endforeach
+
+    <section ng-controller="ClassroomController as showCase">
+
+        <md-content class="md-padding classroom">
+
+            <div ng-repeat="table in chart" class="@{{ table.name }} table">
+                <div class="desk" ng-repeat="seat in table.seats">
+                    <div ng-if="seat" ng-click="showCase.marks($event, seat)" class="student">
+                        <p>@{{ getStudentByObject(seat) }}</p>
+                    </div>
+
+                    <div ng-if="!seat" ng-click="showCase.fillSeat($event, table.name, $index)" class="student">
+                        <p><i>unassigned</i></p>
+                    </div>
+                </div>
             </div>
-        @endforeach
+        </md-content>
+        <md-fab-toolbar md-open="demo.isOpen" count="demo.count"
+                        md-direction="@{{demo.selectedDirection}}">
+            <md-fab-trigger class="align-with-text">
+                <md-button aria-label="menu" class="md-fab md-primary">
+                    <md-icon md-svg-src="navigation:menu"></md-icon>
+                </md-button>
+            </md-fab-trigger>
+            <md-toolbar>
+                <md-fab-actions class="md-toolbar-tools">
+                    <md-button aria-label="comment" class="md-icon-button">
+                        <md-icon md-svg-src="communication:comment"></md-icon>
+                    </md-button>
+                    <md-button aria-label="label" class="md-icon-button">
+                        <md-icon md-svg-src="action:label"></md-icon>
+                    </md-button>
+                    <md-button aria-label="photo" class="md-icon-button">
+                        <md-icon md-svg-src="editor:insert_photo"></md-icon>
+                    </md-button>
+                </md-fab-actions>
+            </md-toolbar>
+        </md-fab-toolbar>
+        <md-content class="md-padding" layout="column">
+            <div layout="row" layout-align="space-around">
+                <div layout="column">
+                    <b>Open/Closed</b>
+                    <md-radio-group ng-model="demo.isOpen">
+                        <md-radio-button ng-value="true">Open</md-radio-button>
+                        <md-radio-button ng-value="false">Closed</md-radio-button>
+                    </md-radio-group>
+                </div>
+                <div layout="column">
+                    <b>Direction</b>
+                    <md-radio-group ng-model="demo.selectedDirection">
+                        <md-radio-button ng-value="'left'">Left</md-radio-button>
+                        <md-radio-button ng-value="'right'">Right</md-radio-button>
+                    </md-radio-group>
+                </div>
+            </div>
+        </md-content>
     </section>
 @endsection
 
 @section('styles')
+    <link rel="stylesheet"
+          href="https://ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.min.css">
+
     <style>
-        #classroom {
-            width: 80%;
-            float: left;
-            display: block;
-            margin: 0 0 0 6%;
+        .break {
+            height: 2em;
+        }
+
+        .classroom {
+            display: -webkit-flex; /* Safari */
+            -webkit-flex-flow: row wrap; /* Safari 6.1+ */
+            display: flex;
+            flex-flow: row wrap;
+            padding: 0 2em;
+        }
+
+        .table {
+            flex: 1 45%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            display: flex;
+            margin: 0 0 2em 2.5%;
+            flex-flow: row wrap;
+        }
+
+        .table .desk {
+            justify-content: center;
+            align-items: center;
+            flex: 1 30%;
+            margin: .5em 1% 0 0;
+            color: #3c3c3c;
+            font-weight: 600;
+            display: flex;
 
         }
-        #classroom .table {
-            width: 40%;
-            float: left;
-            margin: 5% 2% 0 0;
-            display: block;
-            min-width: 400px;
+
+        .table .desk .student {
+            flex: 1;
+            display: flex;
             height: 200px;
+            justify-content: center;
+            align-items: center;
         }
 
-        #classroom .table div {
-            width: 33%;
-            height: 50%;
-            border: 1px solid #000000;
-            display: block;
-            float: left;
-        }
-        #classroom .table div:nth-child(3n){
-            width: 34%;
+        .table .desk .student p {
+            flex: 1;
+            text-align: center;
         }
 
-        .green {
-            background: green;
+        .green .desk .student {
+            background: rgba(0, 255, 0, .5);
         }
 
-        .blue {
-            background: blue;
+        .blue .desk .student {
+            background: rgba(0, 0, 255, .5);
         }
 
-        .red {
+        .red .desk .student {
+            background: rgba(255, 0, 0, .5);
             background: red;
         }
 
-        .yellow {
+        .yellow .desk .student {
             background: yellow;
         }
 
-        .orange {
+        .orange .desk .student {
             background: orange;
         }
 
-        .purple {
+        .purple .desk .student {
             background: purple;
         }
-        #materials-table {
-            height: 60%;
-            width: 10%;
-            display: block;
 
-            float:left;
-
-        }
-        #materials-table h3 {
-            transform: rotate(90deg);
-            transform-origin: left top 0;
-            margin: 0 -3em 0 0;
-        }
     </style>
 @endsection
 
 
 @section('modal')
-    <div class="modal fade" id="marks">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">Modal title</h4>
-                </div>
-                <div class="modal-body">
-                    <p>One fine body&hellip;</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+    {{--<div class="modal fade" id="marks">--}}
+    {{--<div class="modal-dialog">--}}
+    {{--<div class="modal-content">--}}
+    {{--<div class="modal-header">--}}
+    {{--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>--}}
+    {{--<h4 class="modal-title"></h4>--}}
+    {{--</div>--}}
+    {{--<div class="modal-body">--}}
+    {{--<p>One fine body&hellip;</p>--}}
+    {{--</div>--}}
+    {{--<div class="modal-footer">--}}
+    {{--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>--}}
+    {{--<button type="button" class="btn btn-primary">Save changes</button>--}}
+    {{--</div>--}}
+    {{--</div><!-- /.modal-content -->--}}
+    {{--</div><!-- /.modal-dialog -->--}}
+    {{--</div><!-- /.modal -->--}}
+
+    {{--<div class="modal fade" id="fillSeat">--}}
+    {{--<div class="modal-dialog">--}}
+    {{--<div class="modal-content">--}}
+    {{--<div class="modal-header">--}}
+    {{--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>--}}
+    {{--<h4 class="modal-title">Fill Seat</h4>--}}
+    {{--</div>--}}
+    {{--<div class="modal-body">--}}
+    {{--<select name="emptyStudents" id="emptyStudents">--}}
+    {{--<option ng-repeat="students in unassignedStudents" value="@{{ students.id }}">@{{ student.name }}</option>--}}
+    {{--</select>--}}
+    {{--</div>--}}
+    {{--<div class="modal-footer">--}}
+    {{--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>--}}
+    {{--<button type="button" class="btn btn-primary">Save changes</button>--}}
+    {{--</div>--}}
+    {{--</div><!-- /.modal-content -->--}}
+    {{--</div><!-- /.modal-dialog -->--}}
+    {{--</div><!-- /.modal -->--}}
 @endsection
 
 
 @section('scripts')
+    {{--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.17/angular.min.js"></script>--}}
+    {{--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.17/angular-animate.min.js"></script>--}}
+    {{--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.17/angular-aria.min.js"></script>--}}
 
+
+    {{--<!-- Angular Material Javascript now available via Google CDN; version 0.11.2 used here -->--}}
+    {{--<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0-rc3/angular-material.min.js"></script>--}}
+    <script>
+
+
+        angular.module('classroom', ['ngMaterial']);
+
+        angular.module('classroom')
+                .controller('ClassroomController', ClassroomController);
+
+        angular.module('classroom')
+                .config(config);
+
+        function config($mdIconProvider) {
+            // Configure URLs for icons specified by [set:]id.
+            $mdIconProvider
+                    .iconSet('action', '/assets/img/icons/svg-sprite-action.svg')   // Register a named icon set of SVGs
+                    .iconSet('av', '/assets/img/icons/svg-sprite-av.svg')   // Register a named icon set of SVGs
+                    .iconSet('alert', '/assets/img/icons/svg-sprite-alert.svg')   // Register a named icon set of SVGs
+                    .iconSet('communication', '/assets/img/icons/svg-sprite-communication.svg')   // Register a named icon set of SVGs
+                    .iconSet('content', '/assets/img/icons/svg-sprite-content.svg')   // Register a named icon set of SVGs
+                    .iconSet('device', '/assets/img/icons/svg-sprite-device.svg')   // Register a named icon set of SVGs
+                    .iconSet('editor', '/assets/img/icons/svg-sprite-editor.svg')   // Register a named icon set of SVGs
+                    .iconSet('file', '/assets/img/icons/svg-sprite-file.svg')   // Register a named icon set of SVGs
+                    .iconSet('hardware', '/assets/img/icons/svg-sprite-hardware.svg')   // Register a named icon set of SVGs
+                    .iconSet('image', '/assets/img/icons/svg-sprite-image.svg')   // Register a named icon set of SVGs
+                    .iconSet('maps', '/assets/img/icons/svg-sprite-maps.svg')   // Register a named icon set of SVGs
+                    .iconSet('navigation', '/assets/img/icons/svg-sprite-navigation.svg')   // Register a named icon set of SVGs
+                    .iconSet('notification', '/assets/img/icons/svg-sprite-notification.svg')   // Register a named icon set of SVGs
+                    .iconSet('social', '/assets/img/icons/svg-sprite-social.svg')   // Register a named icon set of SVGs
+                    .iconSet('toggle', '/assets/img/icons/svg-sprite-togge.svg'); // Register a named icon set of SVGs
+
+        }
+        ;
+
+        ClassroomController.$inject = ['$scope', '$http', '$mdDialog', '$mdToast'];
+
+        function ClassroomController($scope, $http, $mdDialog, $mdToast) {
+
+            var self = this;
+            self.fillSeat = function ($event, tableName, seatIndex) {
+                $mdDialog.show({
+                    controller: FillSeatController,
+                    controllerAs: 'ctrl',
+                    templateUrl: '/assets/html/dialog/fillseat.template.html',
+                    parent: angular.element(document.body),
+                    targetEvent: $event,
+                    clickOutsideToClose: true
+                })
+                        .then(function (studentId) {
+                            var seatId = getAddStudentToSeat(tableName, seatIndex, studentId);
+
+                            $http.post('/api/seats/' + seatId + '/students', {"student_id": studentId})
+                                    .success(function () {
+
+                                    }).error(function () {
+
+                                    });
+                        }, function () {
+                            $scope.status = 'You cancelled the dialog.';
+                        });
+            }
+
+            self.marks = function ($event, student_id) {
+                $mdDialog.show({
+                    controller: MarksController,
+                    controllerAs: 'ctrl',
+                    templateUrl: '/assets/html/dialog/marks.template.html',
+                    parent: angular.element(document.body),
+                    targetEvent: $event,
+                    locals: {
+                        student_id: student_id
+                    },
+                    clickOutsideToClose: true
+                })
+            }
+
+            $http.get('/api/assign/{{ $classroomId }}')
+                    .success(function (data) {
+                        $scope.chart = data;
+                    }).error(function (data) {
+                        alert(data);
+                    })
+
+
+            $scope.isOpen = false;
+
+            $scope.demo = {
+                isOpen: false,
+                count: 0,
+                selectedDirection: 'left'
+            };
+
+            getStudentsWithoutASeat();
+
+            function MarksController($timeout, $q, $scope, $mdDialog, student_id) {
+                $scope.student_id = student_id;
+                $http.get('/api/marks')
+                        .success(function (data, status) {
+
+                        });
+                $scope.confirm = function () {
+                    $mdDialog.hide();
+                }
+            }
+
+            function FillSeatController($timeout, $q, $scope, $mdDialog) {
+                var self = this;
+                // list of `state` value/display objects
+                self.students = loadAll();
+                self.querySearch = querySearch;
+                // ******************************
+                // Template methods
+                // ******************************
+                self.cancel = function ($event) {
+                    $mdDialog.cancel();
+                };
+                self.finish = function ($event, selectedItem) {
+                    $mdDialog.hide(selectedItem.id);
+                };
+                // ******************************
+                // Internal methods
+                // ******************************
+                /**
+                 * Search for states... use $timeout to simulate
+                 * remote dataservice call.
+                 */
+                function querySearch(query) {
+                    return query ? self.students.filter(createFilterFor(query)) : self.students;
+                }
+
+                /**
+                 * Build `states` list of key/value pairs
+                 */
+                function loadAll() {
+
+
+                    $http.get('/api/classrooms/{{$classroomId}}/unassigned')
+                            .success(function (data, status) {
+                                self.students = [];
+                                data.map(function (student) {
+                                    self.students.push({
+                                        value: student.name.toLowerCase(),
+                                        display: student.name,
+                                        id: student.id
+                                    });
+                                });
+                            });
+
+                }
+
+                /**
+                 * Create filter function for a query string
+                 */
+                function createFilterFor(query) {
+                    var lowercaseQuery = angular.lowercase(query);
+                    return function filterFn(state) {
+                        return (state.value.indexOf(lowercaseQuery) === 0);
+                    };
+                }
+
+
+            }
+
+            $scope.isOpen = false;
+            $scope.demo = {
+                isOpen: false,
+                count: 0,
+                selectedDirection: 'left'
+            };
+
+            function getStudentsWithoutASeat() {
+                $http.get('{{route('unassignedStudents', ['classroomId' => $classroomId])}}')
+                        .success(function (res) {
+                            $scope.unassignedStudents = res;
+                        })
+                        .error(function (e) {
+                        })
+            }
+
+            function getAddStudentToSeat(tableName, seatIndex, studentId) {
+                var key = 0;
+                for (var key in $scope.chart) {
+                    if ($scope.chart.hasOwnProperty(key)) {
+                        table = $scope.chart[key];
+                        if (table.name == tableName) {
+                            var i = 0;
+                            for (var prop in table.seats) {
+                                if (table.seats.hasOwnProperty(prop)) {
+                                    if (seatIndex === i) {
+                                        $scope.chart[key].seats[prop] = studentId;
+                                        return prop;
+                                    }
+                                    i++;
+                                }
+
+                            }
+                        }
+                    }
+                    key++;
+                }
+            }
+
+            $scope.students = <?php echo  json_encode($students); ?>;
+
+
+            $scope.getStudentByObject = function (id) {
+
+                return $scope.students[id];
+            }
+
+        }
+
+
+    </script>
 @endsection

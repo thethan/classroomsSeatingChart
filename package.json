@@ -2,7 +2,8 @@
   "private": true,
   "devDependencies": {
     "gulp": "^3.8.8",
-    "gulp-rename": "^1.2.2"
+    "gulp-rename": "^1.2.2",
+    "gulp-svg-sprite": "^1.2.13"
   },
   "dependencies": {
     "laravel-elixir": "^3.0.0",

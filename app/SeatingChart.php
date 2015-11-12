@@ -16,6 +16,8 @@ class SeatingChart extends Model
 
     public $studentRoster = array();
 
+    public $filledSeats = array();
+
     public $timestamps = false;
 
 
@@ -48,11 +50,14 @@ class SeatingChart extends Model
         $this->roster($students);
 
         Table::all()->each(function($table){
+            $this->chart[$table->id] = ['name' => $table->color, 'seats' => []];
             $seats = $table->seats;
             foreach($seats as $seat){
-                $this->chart[$table->color][$seat->id] = null;
-                if(array_key_exists($seat->id, $this->studentRoster)){
-                    $this->chart[$table->color][$seat->id] = $this->studentRoster[$seat->id];
+
+                $this->chart[$table->id]['seats'][$seat->id] = null;
+                if(in_array($seat->id, $this->studentRoster)){
+
+                    $this->chart[$table->id]['seats'][$seat->id] = $this->filledSeats[$seat->id];
                 }
             }
         });
@@ -61,15 +66,16 @@ class SeatingChart extends Model
 
     protected function roster(Collection $students)
     {
-        $return = array();
         foreach($students as $student){
 
             $this->studentRoster[$student->id] = null;
 
             if(!empty($student->seat->id)) {
-                $this->studentRoster[(string) $student->id] = (string) $student->seat->id;
+                $this->studentRoster[$student->id] = $student->seat->id;
+                $this->filledSeats[$student->seat->id] = $student->id;
             }
         }
+
     }
 
 }

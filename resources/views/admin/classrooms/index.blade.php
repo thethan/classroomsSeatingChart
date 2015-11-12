@@ -76,7 +76,9 @@
                 }, {
                     "targets": [4],
 
-                    "defaultContent": "<button type='button' class='btn btn-primary col-xs-4 edit' >Edit</button>"+
+                    "defaultContent":
+                    "<button type='button' class='btn btn-primary col-xs-4 edit' >Edit</button>"+
+                    "<button type='button' class='btn btn-danger col-sm-offset-2 success'  data-whatever='Title'>Active</button>"+
                     "<button type='button' class='btn btn-danger col-sm-offset-2 delete'  data-whatever='Title'>Delete</button>",
                 }
             ]
@@ -86,6 +88,11 @@
             var data = table.row($(this).parents('tr')).data();
             console.log(data);
             window.location.href = '/admin/classrooms/' + data.id + '/edit';
+        });
+
+        $('#classrooms tbody').on('click', 'button.success', function () {
+            var data = table.row($(this).parents('tr')).data();
+            window.location.href = '/admin/assign/' + data.id ;
         });
 
         $('#classrooms tbody').on('click', '.delete', function () {

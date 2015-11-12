@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Student;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Jobs\ClassroomFormFields;
@@ -85,5 +86,13 @@ class StudentsController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function unassigned($classroomId)
+    {
+        $student = new Student();
+        $students = $student->withoutSeat($classroomId);
+
+        return response()->json($students);
     }
 }

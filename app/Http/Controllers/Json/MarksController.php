@@ -17,9 +17,9 @@ class MarksController extends Controller
      */
     public function index()
     {
-        $marks = Mark::all();
+        $return = Mark::all();
 
-        return response()->json($marks);
+        return response()->json(['data' => $return]);
     }
 
     /**
@@ -92,4 +92,5 @@ class MarksController extends Controller
     {
         //
     }
+
 }

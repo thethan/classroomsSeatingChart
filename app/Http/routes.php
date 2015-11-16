@@ -30,8 +30,10 @@ Route::group(['prefix' => 'admin'], function(){
     Route::resource('/marks', 'MarksController');
     Route::get('/tables/{tableId}/seats', 'TablesController@seats');
 
+    Route::resource('classrooms/{classroomId}/students', 'StudentsController');
     //
     Route::get('assign/{classroomId}', 'Classrooms@assignSeatingChart');
+
 
     //Get Assigned Students
     Route::get('/classrooms/{classroomId}/unassigned','StudentsController@unassigned')->name('unassignedStudents');
@@ -41,13 +43,45 @@ Route::group(['prefix' => 'api'], function (){
     Route::resource('/classrooms','Json\ClassroomController');
     Route::resource('/tables','Json\TablesController');
     Route::resource('/seats','Json\SeatsController');
-    Route::resource('/seats', 'Json\MarksController');
+    Route::resource('/marks', 'Json\MarksController');
     Route::get('/assign/{classroomId}','Json\ClassroomController@assign');
+
+    //
+    Route::post('students/{id}/marks/{markId}/add', 'Json\MarkStudentsController@addMark')->name('addMark');
+    Route::put('students/{id}/marks/{markId}/remove', 'Json\MarkStudentsController@removeMark')->name('removeMark');
+
+
+    Route::get('students/{id}/marks/today', 'Json\StudentsController@marksToday')->name('marksToday');
+
     Route::get('/classrooms/{classroomId}/students','Json\ClassroomController@students');
+    Route::get('/classrooms/{classroomId}/students/all','Json\StudentsController@index');
+
     Route::get('/classrooms/{classroomId}/unassigned','StudentsController@unassigned')->name('unassignedStudents');
 
-
     Route::post('/seats/{seatId}/students', 'Json\SeatsController@assignStudent');
+    Route::put('/seats/{seatId}/students', 'Json\SeatsController@detachStudent');
+
 });
+
+
+
+//Logging in and out
+get('/auth/login', 'Auth\AuthController@getLogin');
+post('/auth/login', 'Auth\AuthController@postLogin');
+get('/auth/logout', 'Auth\AuthController@getLogout');
+
+//Registration Routes
+Route::get('auth/register', 'Auth\AuthController@getRegister');
+Route::post('auth/register', 'Auth\AuthController@postRegister');
+
+// Password reset link request routes...
+Route::get('password/email', 'Auth\PasswordController@getEmail');
+Route::post('password/email', 'Auth\PasswordController@postEmail');
+
+// Password reset routes...
+Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
+Route::post('password/reset', 'Auth\PasswordController@postReset');
+
+
 
 

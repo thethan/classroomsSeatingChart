@@ -28,7 +28,7 @@ class MarksController extends Controller
     public function create()
     {
 
-        $data = array('mark' => null);
+        $data = array('name' => null);
         return view('admin.marks.create', $data);
     }
 
@@ -43,7 +43,8 @@ class MarksController extends Controller
 
         $response = Mark::create($request->only('name'));
 
-        return redirect('/admin/marks');
+        return redirect('/admin/marks')
+            ->withSuccess("The mark '$mark->name' was created");
     }
 
     /**
@@ -65,7 +66,9 @@ class MarksController extends Controller
      */
     public function edit($id)
     {
-        //
+        $mark = Mark::find($id);
+
+        return view('admin.marks.edit', $mark);
     }
 
     /**
@@ -75,9 +78,17 @@ class MarksController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(MarksController $request, $id)
+    public function update(MarkRequest $request, $id)
     {
-        //
+        $mark = Mark::find($id);
+
+        $mark->name = $request->get('name');
+
+        $mark->save();
+
+        return redirect('/admin/marks')
+            ->withSuccess("The mark '$mark->name' was updated");
+
     }
 
     /**

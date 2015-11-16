@@ -6,7 +6,7 @@
             <a href="{{url('/admin/marks/create') }}" class="btn btn-primary pull-right">Create Mark</a>
         </div>
     </div>
-    <table id="markd">
+    <table id="marks">
         <thead>
         <tr>
             <th>Id</th>
@@ -53,9 +53,9 @@
 
 @section("scripts")
     <script>
-        var table = $('#classrooms').DataTable({
+        var table = $('#marks').DataTable({
             ajax: {
-                "url": "/api/classrooms",
+                "url": "/api/marks",
 
             },
             "columns": [
@@ -70,8 +70,9 @@
                     "visible": false,
                     "searchable": false,
                     "searchable": false,
-                }, {
-                    "targets": [4],
+                },
+                {
+                    "targets": [3],
 
                     "defaultContent":
                     "<button type='button' class='btn btn-primary col-xs-4 edit' >Edit</button>"+
@@ -83,7 +84,7 @@
         $('#marks tbody').on('click', 'button.edit', function () {
             var data = table.row($(this).parents('tr')).data();
             console.log(data);
-            window.location.href = '/admin/classrooms/' + data.id + '/edit';
+            window.location.href = '/admin/marks/' + data.id + '/edit';
         });
 
 

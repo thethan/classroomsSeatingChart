@@ -1,7 +1,7 @@
 <div class="form-group">
     {!! Form::label('name', 'Mark', array('class' => 'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::text('name',$mark,['class' => 'control-input form-control', 'placeholder' => 'Mark', 'id' => 'name'], $mark) !!}
+        {!! Form::text('name',$name,['class' => 'control-input form-control', 'placeholder' => 'Mark', 'id' => 'name'], $name) !!}
     </div>
 </div>
 

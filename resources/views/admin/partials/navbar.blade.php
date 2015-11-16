@@ -23,9 +23,11 @@
                         <li>{!!  link_to_action('TablesController@index', 'Tables')  !!}</li>
                         <li>{!!  link_to_action('SeatsController@index', 'Seats') !!}</li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
+                        <li>{!!  link_to_action('MarksController@index', 'Marks') !!}</li>
+
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">One more separated link</a></li>
+                        <li>{!!  link_to_action('SeatsController@index', 'Reports') !!}</li>
+
                     </ul>
                 </li>
                 </li>

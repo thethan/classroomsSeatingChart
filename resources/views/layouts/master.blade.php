@@ -6,6 +6,12 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
 
     @yield('styles')
+    <style>
+        table.dataTable thead .sorting, table.dataTable thead .sorting_desc, table.dataTable thead .sorting_asc {
+            background-image: none ;
+
+        }
+    </style>
     <link rel="stylesheet" href="{{ elixir('css/app.css') }}">
 
     {{--<script src="{{ elixir('js/app.js') }}"></script>--}}

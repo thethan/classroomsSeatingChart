@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Json;
 
 use App\Student;
 use Illuminate\Http\Request;
@@ -22,8 +22,9 @@ class StudentsController extends Controller
      */
     public function index($classroomId)
     {
-        $data = $this->dispatch(new ClassroomFormFields($classroomId));
-        return view('admin.students.index', $data);
+       $return = Student::where('classroom_id', $classroomId)->get();
+
+       return response()->json(['data' => $return]);
     }
 
     /**
@@ -94,8 +95,8 @@ class StudentsController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+* @return \Illuminate\Http\Response
+*/
     public function destroy($id)
     {
         //
@@ -107,5 +108,22 @@ class StudentsController extends Controller
         $students = $student->withoutSeat($classroomId);
 
         return response()->json($students);
+    }
+
+    /**
+     *
+     */
+    public function marksToday($id)
+    {
+        $student = Student::find($id);
+
+        $marks = $student->marksToday();
+
+        $return = [];
+
+        foreach($marks as $mark){
+            $return  = (array)[$mark->marK_id  => $mark];
+        }
+        return response()->json((array)$return);
     }
 }

@@ -1,5 +1,5 @@
-@extends('layouts.material')
 
+@extends('layouts.material')
 @section('content')
 
 
@@ -9,7 +9,7 @@
 
             <div ng-repeat="table in chart" class="@{{ table.name }} table">
                 <div class="desk" ng-repeat="seat in table.seats">
-                    <div ng-if="seat" ng-click="showCase.marks($event, seat)" class="student">
+                    <div ng-if="seat" ng-click="showCase.marks($event, seat, table.name, $index)" class="student">
                         <p>@{{ getStudentByObject(seat) }}</p>
                     </div>
 
@@ -30,34 +30,29 @@
                 <md-fab-actions class="md-toolbar-tools">
                     <md-button aria-label="comment" class="md-icon-button">
                         <md-icon md-svg-src="communication:comment"></md-icon>
+                        <md-tooltip md-direction="top">
+                            Classrooms
+                        </md-tooltip>
+
                     </md-button>
                     <md-button aria-label="label" class="md-icon-button">
                         <md-icon md-svg-src="action:label"></md-icon>
+                        <md-tooltip md-direction="top">
+                            Home
+                        </md-tooltip>
+
                     </md-button>
                     <md-button aria-label="photo" class="md-icon-button">
-                        <md-icon md-svg-src="editor:insert_photo"></md-icon>
+                        <md-tooltip>
+                            Reports
+                        </md-tooltip>
+                        <md-icon md-svg-src="editor:insert_photo">
+
+                        </md-icon>
                     </md-button>
                 </md-fab-actions>
             </md-toolbar>
         </md-fab-toolbar>
-        <md-content class="md-padding" layout="column">
-            <div layout="row" layout-align="space-around">
-                <div layout="column">
-                    <b>Open/Closed</b>
-                    <md-radio-group ng-model="demo.isOpen">
-                        <md-radio-button ng-value="true">Open</md-radio-button>
-                        <md-radio-button ng-value="false">Closed</md-radio-button>
-                    </md-radio-group>
-                </div>
-                <div layout="column">
-                    <b>Direction</b>
-                    <md-radio-group ng-model="demo.selectedDirection">
-                        <md-radio-button ng-value="'left'">Left</md-radio-button>
-                        <md-radio-button ng-value="'right'">Right</md-radio-button>
-                    </md-radio-group>
-                </div>
-            </div>
-        </md-content>
     </section>
 @endsection
 
@@ -134,7 +129,7 @@
         }
 
         .purple .desk .student {
-            background: purple;
+            background: rgba(147,112,219,1);
         }
 
     </style>
@@ -142,54 +137,12 @@
 
 
 @section('modal')
-    {{--<div class="modal fade" id="marks">--}}
-    {{--<div class="modal-dialog">--}}
-    {{--<div class="modal-content">--}}
-    {{--<div class="modal-header">--}}
-    {{--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>--}}
-    {{--<h4 class="modal-title"></h4>--}}
-    {{--</div>--}}
-    {{--<div class="modal-body">--}}
-    {{--<p>One fine body&hellip;</p>--}}
-    {{--</div>--}}
-    {{--<div class="modal-footer">--}}
-    {{--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>--}}
-    {{--<button type="button" class="btn btn-primary">Save changes</button>--}}
-    {{--</div>--}}
-    {{--</div><!-- /.modal-content -->--}}
-    {{--</div><!-- /.modal-dialog -->--}}
-    {{--</div><!-- /.modal -->--}}
 
-    {{--<div class="modal fade" id="fillSeat">--}}
-    {{--<div class="modal-dialog">--}}
-    {{--<div class="modal-content">--}}
-    {{--<div class="modal-header">--}}
-    {{--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>--}}
-    {{--<h4 class="modal-title">Fill Seat</h4>--}}
-    {{--</div>--}}
-    {{--<div class="modal-body">--}}
-    {{--<select name="emptyStudents" id="emptyStudents">--}}
-    {{--<option ng-repeat="students in unassignedStudents" value="@{{ students.id }}">@{{ student.name }}</option>--}}
-    {{--</select>--}}
-    {{--</div>--}}
-    {{--<div class="modal-footer">--}}
-    {{--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>--}}
-    {{--<button type="button" class="btn btn-primary">Save changes</button>--}}
-    {{--</div>--}}
-    {{--</div><!-- /.modal-content -->--}}
-    {{--</div><!-- /.modal-dialog -->--}}
-    {{--</div><!-- /.modal -->--}}
 @endsection
 
 
 @section('scripts')
-    {{--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.17/angular.min.js"></script>--}}
-    {{--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.17/angular-animate.min.js"></script>--}}
-    {{--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.17/angular-aria.min.js"></script>--}}
 
-
-    {{--<!-- Angular Material Javascript now available via Google CDN; version 0.11.2 used here -->--}}
-    {{--<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0-rc3/angular-material.min.js"></script>--}}
     <script>
 
 
@@ -239,10 +192,13 @@
                 })
                         .then(function (studentId) {
                             var seatId = getAddStudentToSeat(tableName, seatIndex, studentId);
-
+                            studentName = $scope.students[studentId];
                             $http.post('/api/seats/' + seatId + '/students', {"student_id": studentId})
                                     .success(function () {
-
+                                        var toast = $mdToast.simple()
+                                                .content( studentName + ' found their seat.')
+                                                .highlightAction(false);
+                                        $mdToast.show(toast);
                                     }).error(function () {
 
                                     });
@@ -251,7 +207,8 @@
                         });
             }
 
-            self.marks = function ($event, student_id) {
+            self.marks = function ($event, studentId, tableName, seatIndex) {
+                var seatId = getSeatId(tableName, seatIndex);
                 $mdDialog.show({
                     controller: MarksController,
                     controllerAs: 'ctrl',
@@ -259,7 +216,10 @@
                     parent: angular.element(document.body),
                     targetEvent: $event,
                     locals: {
-                        student_id: student_id
+                        tableName: tableName,
+                        student_id: studentId,
+                        seatId : seatId,
+
                     },
                     clickOutsideToClose: true
                 })
@@ -283,15 +243,43 @@
 
             getStudentsWithoutASeat();
 
-            function MarksController($timeout, $q, $scope, $mdDialog, student_id) {
-                $scope.student_id = student_id;
+            function MarksController($timeout, $q, $scope, $mdDialog, tableName, student_id, seatId) {
+                var self = this;
+                $scope.studentId = student_id;
                 $http.get('/api/marks')
                         .success(function (data, status) {
-
+                            $scope.marks  = data.data;
+                        });
+                $http.get('/api/students/'+student_id+'/marks/today')
+                        .success(function (data, status) {
+                            $scope.historicalMarks  = data.data;
                         });
                 $scope.confirm = function () {
                     $mdDialog.hide();
                 }
+
+                self.removeFromSeat = function ($event, studentId) {
+
+                    $http.put('/api/seats/' + seatId + '/students', {"student_id": student_id})
+                            .success(function (data, status) {
+                                getRemoveStudentToSeat(tableName, seatId);
+                                $mdDialog.hide();
+                            })
+                }
+
+                $scope.addMark = function(markId, $event){
+                    $http.post('/api/students/'+student_id+'/marks/'+markId+'/add')
+                            .success(function(data, status){
+
+                            });
+                }
+                $scope.removeMark = function(markId, $event){
+                    $http.put('/api/students/'+student_id+'/marks/'+markId+'/remove')
+                            .success(function(data, status){
+
+                            });
+                }
+
             }
 
             function FillSeatController($timeout, $q, $scope, $mdDialog) {
@@ -377,8 +365,49 @@
                             var i = 0;
                             for (var prop in table.seats) {
                                 if (table.seats.hasOwnProperty(prop)) {
+                                    console.log(prop);
                                     if (seatIndex === i) {
                                         $scope.chart[key].seats[prop] = studentId;
+                                        return prop;
+                                    }
+                                    i++;
+                                }
+
+                            }
+                        }
+                    }
+                    key++;
+                }
+            }
+
+            function getRemoveStudentToSeat(tableName, seatId, studentId) {
+                var key = 0;
+                for (var key in $scope.chart) {
+                    if ($scope.chart.hasOwnProperty(key)) {
+                        table = $scope.chart[key];
+                        if (table.name == tableName) {
+                            var i = 0;
+                            for (var prop in table.seats) {
+                                if(prop === seatId){
+                                    $scope.chart[key].seats[prop] = null;
+                                    return;
+                                }
+                            }
+                        }
+                    }
+                    key++;
+                }
+            }
+
+            function getSeatId(tableName, seatIndex) {
+                for (var key in $scope.chart) {
+                    if ($scope.chart.hasOwnProperty(key)) {
+                        table = $scope.chart[key];
+                        if (table.name == tableName) {
+                            var i = 0;
+                            for (var prop in table.seats) {
+                                if (table.seats.hasOwnProperty(prop)) {
+                                    if (seatIndex === i) {
                                         return prop;
                                     }
                                     i++;

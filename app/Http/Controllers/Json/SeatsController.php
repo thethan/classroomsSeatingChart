@@ -129,4 +129,17 @@ class SeatsController extends Controller
 
 
     }
+
+    public function detachStudent(AssignStudentRequest $request, $seatId)
+    {
+        $seat = Seat::find($seatId);
+
+        $studentId = $request->only('student_id');
+        $student = Student::find($studentId['student_id']);
+
+        $student->seat_id = null;
+        $student->save();
+
+        return response()->json(null,204);
+    }
 }

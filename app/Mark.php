@@ -13,5 +13,7 @@ class Mark extends Model
      */
     protected $fillable = ['name'];
 
-
+    public function student()
+    {
+    }
 }

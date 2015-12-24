@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers\Json;
 
+use App\Mark;
 use App\Student;
-use Illuminate\Http\Request;
-use App\Http\Requests\StudentRequest;
 use App\Http\Requests;
-use App\Jobs\ClassroomFormFields;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StudentRequest;
 
 class StudentsController extends Controller
 {
@@ -115,15 +114,23 @@ class StudentsController extends Controller
      */
     public function marksToday($id)
     {
+        $allMarks = Mark::all();
+
         $student = Student::find($id);
 
         $marks = $student->marksToday();
 
         $return = [];
 
-        foreach($marks as $mark){
-            $return  = (array)[$mark->marK_id  => $mark];
+
+        foreach($allMarks as $mark){
+            $today = $student->marksToday($mark->id);
+            if(is_null($today)){
+                $today = new \stdClass();
+                $today->mark_count = 0;
+            }
+            $return[$mark->id] = $today;
         }
-        return response()->json((array)$return);
+        return response()->json($return);
     }
 }

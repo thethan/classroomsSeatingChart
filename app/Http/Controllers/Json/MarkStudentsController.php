@@ -26,6 +26,8 @@ class MarkStudentsController extends Controller
 
         $student->mark()->save($mark);
 
+        return response('',204);
+
     }
 
     /**
@@ -36,7 +38,7 @@ class MarkStudentsController extends Controller
     {
         $student = Student::find($id);
 
-        $student->selectMark($markId);
+        $student->deleteMark($markId);
 
         return response(null,204);
     }

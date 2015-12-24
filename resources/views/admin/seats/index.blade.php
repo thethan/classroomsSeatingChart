@@ -33,7 +33,7 @@
                 <div class="modal-body row">
 
                     <button type="button" class="btn btn-default " data-dismiss="modal">Cancel</button>
-                    {!! Form::open(array('class' => 'form-inline', 'id' => 'deleteTable', 'method' => 'DELETE', 'route' => array('admin.tables.destroy'))) !!}
+                    {!! Form::open(array('class' => 'form-inline', 'id' => 'deleteTable', 'method' => 'DELETE', 'url' => array('admin.tables.seats.destroy'))) !!}
 
                         {!! Form::submit('Delete', array('class' => 'btn btn-danger pull-right')) !!}
 
@@ -90,7 +90,7 @@
                     "targets": [3],
 
                     "defaultContent": "<button type='button' class='btn btn-primary col-xs-4 edit' >Edit</button>"+
-                    "<button type='button' class='btn btn-danger col-sm-offset-2 delete'  data-whatever='Title'>Delete</button>",
+                    "<button type='button' class='btn btn-danger col-sm-offset-2 delete' data-whatever='Title'>Delete</button>",
                 }
             ]
         });
@@ -99,7 +99,7 @@
 
             var data = table.row($(this).parents('tr')).data();
             console.log(data);
-            window.location.href = '/admin/tables/' + data.id + '/edit';
+            window.location.href = '/admin/tables/{{$table_id}}/seats/'+ data.id + '/edit';
         });
 
 
@@ -109,8 +109,8 @@
             // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
             var modal = $('#deleteModal');
             console.log(data);
-            modal.find('.modal-title').text('Do you want to delete Table: ' + data.color + '?')
-            modal.find('#deleteTable').attr('action', '/admin/tables/'+data.id)
+            modal.find('.modal-title').text('Do you want to delete Table: ' + data.number + '?')
+            modal.find('#deleteTable').attr('action', '/admin/tables/{{$table_id}}/seats/'+data.id)
             $('#deleteModal').modal('show');
         })
 

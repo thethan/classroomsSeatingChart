@@ -22,10 +22,12 @@ class SeatsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($tableId)
     {
-        return view('admin.seats.index')
-            ->with('table_id', null);
+
+        $data = $this->dispatch(new TableFormFields($tableId));
+        return view('admin.seats.index', $data)
+            ->with('table_id', $tableId);
     }
 
     /**
@@ -115,9 +117,9 @@ class SeatsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($tableid, $seatId)
     {
-        $seat = Seat::findOrFail($id);
+        $seat = Seat::findOrFail($seatId);
         $seat->delete();
 
         return redirect('/admin/tables/'.$seat->table_id.'/seats')

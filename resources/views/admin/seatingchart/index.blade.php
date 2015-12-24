@@ -57,8 +57,7 @@
 @endsection
 
 @section('styles')
-    <link rel="stylesheet"
-          href="https://ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.min.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.min.css">
 
     <style>
         .break {
@@ -220,6 +219,7 @@
                         student_id: studentId,
                         seatId : seatId,
 
+
                     },
                     clickOutsideToClose: true
                 })
@@ -252,7 +252,8 @@
                         });
                 $http.get('/api/students/'+student_id+'/marks/today')
                         .success(function (data, status) {
-                            $scope.historicalMarks  = data.data;
+                            $scope.historicalMarks  = data;
+                            console.log($scope.historicalMarks);
                         });
                 $scope.confirm = function () {
                     $mdDialog.hide();
@@ -270,15 +271,25 @@
                 $scope.addMark = function(markId, $event){
                     $http.post('/api/students/'+student_id+'/marks/'+markId+'/add')
                             .success(function(data, status){
-
+                                $scope.historicalMarks[markId].mark_count++;
                             });
                 }
                 $scope.removeMark = function(markId, $event){
                     $http.put('/api/students/'+student_id+'/marks/'+markId+'/remove')
                             .success(function(data, status){
-
+                                $scope.historicalMarks[markId].mark_count--;
                             });
                 }
+
+                self.cancel = function ($event) {
+                    $mdDialog.cancel();
+                };
+                self.confirm = function ($event) {
+                    $mdDialog.hide();
+                };
+                self.finished = function ($event) {
+                    $mdDialog.cancel();
+                };
 
             }
 

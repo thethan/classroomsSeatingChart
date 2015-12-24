@@ -64,7 +64,6 @@ class StudentsController extends Controller
      */
     public function show($id)
     {
-        //
     }
 
     /**

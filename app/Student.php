@@ -88,14 +88,38 @@ class Student extends Model
     /**
      *
      */
-    public function marksToday()
+    public function marksToday($markId = null)
     {
         $query = $this->marksQuery();
 
-        return  $query->whereBetween('created_at', [Carbon::today(), Carbon::tomorrow()])
-            ->groupBy('mark_id')
-            ->select(DB::raw('count(mark_id) as mark_count, *'))
+        if($markId) {
+            return $query
+                ->select(DB::raw('count(mark_id) as mark_count'))
+                ->whereBetween('created_at', [Carbon::today(), Carbon::tomorrow()])
+                ->where('marK_id', $markId)
+                ->groupBy('mark_id')
+                ->first();
+        } else {
+            return $query->whereBetween('created_at', [Carbon::today(), Carbon::tomorrow()])
+                ->groupBy('mark_id')
+                ->select(DB::raw('count(mark_id) as mark_count, *'))
+                ->get();
+        }
+    }
 
+    /**
+     * @param $start
+     * @param $end
+     * @param null $concat
+     * @return mixed
+     */
+    public function marks($start, $end, $concat = null){
+        $query = $this->marksQuery();
+
+        return $query
+            ->groupBy('mark_id')
+            ->whereBetween('created_at', [$start, $end])
+            ->select(DB::raw('count(mark_id) as mark_count, *'))
             ->get();
     }
 

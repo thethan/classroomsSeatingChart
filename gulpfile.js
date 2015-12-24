@@ -119,6 +119,18 @@ elixir(function (mix) {
 
             'jquery.datatables.js',
             'dataTables.bootstrap.js'],
-        'public/js/classroom.js')
+            'public/js/classroom.js'
+        )
+        .scripts(
+            [
+                'jquery.js',
+                'angular.js',
+                'angular-animate.js',
+                'angular-aria.js',
+                '../vendor/angular-material/angular-material.js',
+                'dataTables.bootstrap.js'
+            ],
+
+                'public/js/query.js')
         .version(['css/app.css','css/classroom.css']);
 });

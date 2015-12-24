@@ -11,9 +11,9 @@
     <md-dialog-content>
         <div class="md-dialog-content">
             <md-list>
-                <md-list-item ng-repeat="person in marks" ng-click="addMark(person.id, $event)">
-                    <md-icon alt="{{ person.name }}" md-svg-icon="content:ic_add_circle_24px"></md-icon>
-                    <p>{{ person.name }} <span>( {{historicalMarks[person.id].mark_count }} )</span></p>
+                <md-list-item ng-repeat="mark in marks" ng-click="addMark(mark.id, $event)">
+                    <md-icon alt="{{ mark.name }}" md-svg-icon="content:ic_add_circle_24px"></md-icon>
+                    <p>{{ mark.name }} <span>( {{historicalMarks[mark.id].mark_count }} )</span></p>
                     <md-icon
                             md-svg-icon="content:ic_remove_circle_24px" ng-click="removeMark(person.id, $event)" aria-label="Open Chat" class="md-secondary md-hue-3" ng-class="{'md-primary': person.newMessage}"></md-icon>
                 </md-list-item>
@@ -22,6 +22,6 @@
     </md-dialog-content>
     <div class="md-actions">
         <md-button aria-label="Remove" ng-click="ctrl.removeFromSeat($event,studentId)">Remove From Seat</md-button>
-        <md-button aria-label="Finished" ng-click="ctrl.finish($event, ctrl.selectedItem)">Finished</md-button>
+        <md-button aria-label="Finished" ng-click="ctrl.confirm($event)">Finished</md-button>
     </div>
 </md-dialog>

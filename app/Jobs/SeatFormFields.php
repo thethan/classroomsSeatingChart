@@ -3,6 +3,7 @@
 namespace App\Jobs;
 
 use App\Seat;
+use App\Table;
 use App\Jobs\Job;
 use Illuminate\Contracts\Bus\SelfHandling;
 

@@ -3,6 +3,8 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
+use Symfony\Component\VarDumper\Cloner\VarCloner;
 
 class Classroom extends Model
 {
@@ -12,6 +14,8 @@ class Classroom extends Model
     protected $table = 'classrooms';
 
     public $roster;
+
+    public $report;
 
 
     public function grades()
@@ -42,5 +46,54 @@ class Classroom extends Model
 
         $this->roster = $return;
     }
+
+    public function reports($start, $end, $concat = null)
+    {
+        $students = $this->students;
+        $return = array();
+        foreach($students as $student){
+            $studentArray =[];
+            $studentArray['id'] = $student->id;
+            $studentArray['name'] = $student->name;
+            $studentArray['marks'] = $student->marks($start, $end, $concat);
+            $return[] = $studentArray;
+        }
+        $this->report = $return;
+
+        return $return;
+
+    }
+
+    public function reportsToArray($marks)
+    {
+        $return = [];
+        foreach($this->report as $report){
+            $student['id'] = $report['id'];
+            $student['name'] = $report['name'];
+
+            foreach($marks  as $mark ) {
+                $find = false;
+                foreach($report['marks'] as $reportMark){
+                    if($mark->id == $reportMark->marK_id){
+                        $find = true;
+                        $student[$mark->id] = $reportMark->mark_count;
+                    }
+
+
+                }
+                if($find === false){
+                    $student[$mark->id] = 0;
+                }
+
+            }
+
+            $return[] = $student;
+
+        }
+
+        return $return;
+    }
+
+
 
 }

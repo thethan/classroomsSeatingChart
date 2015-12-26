@@ -2,170 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b44fbd4-0046-4597-be69-0a2b7b6e6e57" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/ReportsController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/excel/tests/test.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/reports/selectClassroom.blade.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/datatables-plugins/i18n/Ukranian.lang" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/storage/databae.sqlite" afterPath="$PROJECT_DIR$/resources/views/admin/reports/selectRange.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular/angular.min.js.gzip" afterPath="$PROJECT_DIR$/bower_components/angular/angular.min.js.gzip" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/storage/database.sqlite" afterPath="$PROJECT_DIR$/storage/database.sqlite" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Classroom.php" afterPath="$PROJECT_DIR$/app/Classroom.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Json/MarkStudentsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Json/MarkStudentsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Json/StudentsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Json/StudentsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/SeatsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/SeatsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/StudentsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/StudentsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Jobs/SeatFormFields.php" afterPath="$PROJECT_DIR$/app/Jobs/SeatFormFields.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Student.php" afterPath="$PROJECT_DIR$/app/Student.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular-animate/.bower.json" afterPath="$PROJECT_DIR$/bower_components/angular-animate/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular-animate/angular-animate.js" afterPath="$PROJECT_DIR$/bower_components/angular-animate/angular-animate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular-animate/angular-animate.min.js" afterPath="$PROJECT_DIR$/bower_components/angular-animate/angular-animate.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular-animate/angular-animate.min.js.map" afterPath="$PROJECT_DIR$/bower_components/angular-animate/angular-animate.min.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular-animate/bower.json" afterPath="$PROJECT_DIR$/bower_components/angular-animate/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular-animate/package.json" afterPath="$PROJECT_DIR$/bower_components/angular-animate/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular-aria/.bower.json" afterPath="$PROJECT_DIR$/bower_components/angular-aria/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular-aria/angular-aria.js" afterPath="$PROJECT_DIR$/bower_components/angular-aria/angular-aria.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular-aria/angular-aria.min.js" afterPath="$PROJECT_DIR$/bower_components/angular-aria/angular-aria.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular-aria/angular-aria.min.js.map" afterPath="$PROJECT_DIR$/bower_components/angular-aria/angular-aria.min.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular-aria/bower.json" afterPath="$PROJECT_DIR$/bower_components/angular-aria/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular-aria/package.json" afterPath="$PROJECT_DIR$/bower_components/angular-aria/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular/.bower.json" afterPath="$PROJECT_DIR$/bower_components/angular/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular/angular.js" afterPath="$PROJECT_DIR$/bower_components/angular/angular.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular/angular.min.js" afterPath="$PROJECT_DIR$/bower_components/angular/angular.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular/angular.min.js.map" afterPath="$PROJECT_DIR$/bower_components/angular/angular.min.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular/bower.json" afterPath="$PROJECT_DIR$/bower_components/angular/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular/package.json" afterPath="$PROJECT_DIR$/bower_components/angular/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap-sass/.bower.json" afterPath="$PROJECT_DIR$/bower_components/bootstrap-sass/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap-sass/CHANGELOG.md" afterPath="$PROJECT_DIR$/bower_components/bootstrap-sass/CHANGELOG.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap-sass/LICENSE" afterPath="$PROJECT_DIR$/bower_components/bootstrap-sass/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap-sass/README.md" afterPath="$PROJECT_DIR$/bower_components/bootstrap-sass/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/javascripts/bootstrap-sprockets.js" afterPath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/javascripts/bootstrap-sprockets.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/javascripts/bootstrap.js" afterPath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/javascripts/bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js" afterPath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js" afterPath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js" afterPath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js" afterPath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js" afterPath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js" afterPath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js" afterPath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js" afterPath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js" afterPath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js" afterPath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js" afterPath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js" afterPath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js" afterPath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/stylesheets/_bootstrap-mincer.scss" afterPath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/stylesheets/_bootstrap-mincer.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss" afterPath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_breadcrumbs.scss" afterPath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_breadcrumbs.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss" afterPath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_carousel.scss" afterPath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_carousel.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss" afterPath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_glyphicons.scss" afterPath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_glyphicons.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_input-groups.scss" afterPath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_input-groups.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_jumbotron.scss" afterPath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_jumbotron.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_modals.scss" afterPath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_modals.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_pagination.scss" afterPath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_pagination.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_theme.scss" afterPath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_theme.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss" afterPath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss" afterPath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_buttons.scss" afterPath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_buttons.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid.scss" afterPath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_hide-text.scss" afterPath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_hide-text.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_vendor-prefixes.scss" afterPath="$PROJECT_DIR$/bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_vendor-prefixes.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap-sass/bower.json" afterPath="$PROJECT_DIR$/bower_components/bootstrap-sass/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap-sass/composer.json" afterPath="$PROJECT_DIR$/bower_components/bootstrap-sass/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap-sass/package.json" afterPath="$PROJECT_DIR$/bower_components/bootstrap-sass/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap-sass/sache.json" afterPath="$PROJECT_DIR$/bower_components/bootstrap-sass/sache.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/.bower.json" afterPath="$PROJECT_DIR$/bower_components/bootstrap/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/Gruntfile.js" afterPath="$PROJECT_DIR$/bower_components/bootstrap/Gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/README.md" afterPath="$PROJECT_DIR$/bower_components/bootstrap/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/bower.json" afterPath="$PROJECT_DIR$/bower_components/bootstrap/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/dist/css/bootstrap-theme.css" afterPath="$PROJECT_DIR$/bower_components/bootstrap/dist/css/bootstrap-theme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/dist/css/bootstrap-theme.css.map" afterPath="$PROJECT_DIR$/bower_components/bootstrap/dist/css/bootstrap-theme.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/dist/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/bower_components/bootstrap/dist/css/bootstrap-theme.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/dist/css/bootstrap.css" afterPath="$PROJECT_DIR$/bower_components/bootstrap/dist/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/dist/css/bootstrap.css.map" afterPath="$PROJECT_DIR$/bower_components/bootstrap/dist/css/bootstrap.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/dist/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/bower_components/bootstrap/dist/css/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/dist/js/bootstrap.js" afterPath="$PROJECT_DIR$/bower_components/bootstrap/dist/js/bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/dist/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/bower_components/bootstrap/dist/js/bootstrap.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/grunt/configBridge.json" afterPath="$PROJECT_DIR$/bower_components/bootstrap/grunt/configBridge.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/js/affix.js" afterPath="$PROJECT_DIR$/bower_components/bootstrap/js/affix.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/js/alert.js" afterPath="$PROJECT_DIR$/bower_components/bootstrap/js/alert.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/js/button.js" afterPath="$PROJECT_DIR$/bower_components/bootstrap/js/button.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/js/carousel.js" afterPath="$PROJECT_DIR$/bower_components/bootstrap/js/carousel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/js/collapse.js" afterPath="$PROJECT_DIR$/bower_components/bootstrap/js/collapse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/js/dropdown.js" afterPath="$PROJECT_DIR$/bower_components/bootstrap/js/dropdown.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/js/modal.js" afterPath="$PROJECT_DIR$/bower_components/bootstrap/js/modal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/js/popover.js" afterPath="$PROJECT_DIR$/bower_components/bootstrap/js/popover.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/js/scrollspy.js" afterPath="$PROJECT_DIR$/bower_components/bootstrap/js/scrollspy.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/js/tab.js" afterPath="$PROJECT_DIR$/bower_components/bootstrap/js/tab.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/js/tooltip.js" afterPath="$PROJECT_DIR$/bower_components/bootstrap/js/tooltip.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/js/transition.js" afterPath="$PROJECT_DIR$/bower_components/bootstrap/js/transition.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/bootstrap.less" afterPath="$PROJECT_DIR$/bower_components/bootstrap/less/bootstrap.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/button-groups.less" afterPath="$PROJECT_DIR$/bower_components/bootstrap/less/button-groups.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/carousel.less" afterPath="$PROJECT_DIR$/bower_components/bootstrap/less/carousel.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/forms.less" afterPath="$PROJECT_DIR$/bower_components/bootstrap/less/forms.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/glyphicons.less" afterPath="$PROJECT_DIR$/bower_components/bootstrap/less/glyphicons.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/input-groups.less" afterPath="$PROJECT_DIR$/bower_components/bootstrap/less/input-groups.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/jumbotron.less" afterPath="$PROJECT_DIR$/bower_components/bootstrap/less/jumbotron.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/mixins/buttons.less" afterPath="$PROJECT_DIR$/bower_components/bootstrap/less/mixins/buttons.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/mixins/grid.less" afterPath="$PROJECT_DIR$/bower_components/bootstrap/less/mixins/grid.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/mixins/hide-text.less" afterPath="$PROJECT_DIR$/bower_components/bootstrap/less/mixins/hide-text.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/mixins/vendor-prefixes.less" afterPath="$PROJECT_DIR$/bower_components/bootstrap/less/mixins/vendor-prefixes.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/modals.less" afterPath="$PROJECT_DIR$/bower_components/bootstrap/less/modals.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/pagination.less" afterPath="$PROJECT_DIR$/bower_components/bootstrap/less/pagination.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/theme.less" afterPath="$PROJECT_DIR$/bower_components/bootstrap/less/theme.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/type.less" afterPath="$PROJECT_DIR$/bower_components/bootstrap/less/type.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/less/variables.less" afterPath="$PROJECT_DIR$/bower_components/bootstrap/less/variables.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/package.js" afterPath="$PROJECT_DIR$/bower_components/bootstrap/package.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/bootstrap/package.json" afterPath="$PROJECT_DIR$/bower_components/bootstrap/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/datatables-plugins/.bower.json" afterPath="$PROJECT_DIR$/bower_components/datatables-plugins/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/datatables-plugins/features/lengthLinks/dataTables.lengthLinks.js" afterPath="$PROJECT_DIR$/bower_components/datatables-plugins/features/lengthLinks/dataTables.lengthLinks.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/datatables-plugins/filtering/type-based/accent-neutralise.js" afterPath="$PROJECT_DIR$/bower_components/datatables-plugins/filtering/type-based/accent-neutralise.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/datatables-plugins/i18n/Chinese-traditional.lang" afterPath="$PROJECT_DIR$/bower_components/datatables-plugins/i18n/Chinese-traditional.lang" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/datatables-plugins/i18n/French.lang" afterPath="$PROJECT_DIR$/bower_components/datatables-plugins/i18n/French.lang" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/datatables-plugins/i18n/Greek.lang" afterPath="$PROJECT_DIR$/bower_components/datatables-plugins/i18n/Greek.lang" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/datatables-plugins/i18n/Italian.lang" afterPath="$PROJECT_DIR$/bower_components/datatables-plugins/i18n/Italian.lang" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/datatables-plugins/i18n/Kyrgyz.lang" afterPath="$PROJECT_DIR$/bower_components/datatables-plugins/i18n/Kyrgyz.lang" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.js" afterPath="$PROJECT_DIR$/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/datatables-plugins/integration/bootstrap/3/index.html" afterPath="$PROJECT_DIR$/bower_components/datatables-plugins/integration/bootstrap/3/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/datatables-plugins/integration/foundation/dataTables.foundation.js" afterPath="$PROJECT_DIR$/bower_components/datatables-plugins/integration/foundation/dataTables.foundation.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/datatables-plugins/integration/foundation/index.html" afterPath="$PROJECT_DIR$/bower_components/datatables-plugins/integration/foundation/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/datatables-plugins/integration/jqueryui/dataTables.jqueryui.css" afterPath="$PROJECT_DIR$/bower_components/datatables-plugins/integration/jqueryui/dataTables.jqueryui.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/datatables-plugins/integration/jqueryui/dataTables.jqueryui.js" afterPath="$PROJECT_DIR$/bower_components/datatables-plugins/integration/jqueryui/dataTables.jqueryui.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/datatables-plugins/integration/jqueryui/index.html" afterPath="$PROJECT_DIR$/bower_components/datatables-plugins/integration/jqueryui/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/datatables-plugins/pagination/input.js" afterPath="$PROJECT_DIR$/bower_components/datatables-plugins/pagination/input.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/datatables-plugins/sorting/datetime-moment.js" afterPath="$PROJECT_DIR$/bower_components/datatables-plugins/sorting/datetime-moment.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/datatables-plugins/sorting/ip-address.js" afterPath="$PROJECT_DIR$/bower_components/datatables-plugins/sorting/ip-address.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/datatables-plugins/sorting/numeric-comma.js" afterPath="$PROJECT_DIR$/bower_components/datatables-plugins/sorting/numeric-comma.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/datatables/.bower.json" afterPath="$PROJECT_DIR$/bower_components/datatables/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/datatables/bower.json" afterPath="$PROJECT_DIR$/bower_components/datatables/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/datatables/media/css/dataTables.bootstrap.css" afterPath="$PROJECT_DIR$/bower_components/datatables/media/css/dataTables.bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/datatables/media/css/dataTables.bootstrap.min.css" afterPath="$PROJECT_DIR$/bower_components/datatables/media/css/dataTables.bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/datatables/media/css/dataTables.foundation.css" afterPath="$PROJECT_DIR$/bower_components/datatables/media/css/dataTables.foundation.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/datatables/media/css/dataTables.foundation.min.css" afterPath="$PROJECT_DIR$/bower_components/datatables/media/css/dataTables.foundation.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/datatables/media/css/dataTables.jqueryui.css" afterPath="$PROJECT_DIR$/bower_components/datatables/media/css/dataTables.jqueryui.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/datatables/media/css/dataTables.jqueryui.min.css" afterPath="$PROJECT_DIR$/bower_components/datatables/media/css/dataTables.jqueryui.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/datatables/media/css/jquery.dataTables.css" afterPath="$PROJECT_DIR$/bower_components/datatables/media/css/jquery.dataTables.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/datatables/media/css/jquery.dataTables.min.css" afterPath="$PROJECT_DIR$/bower_components/datatables/media/css/jquery.dataTables.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/datatables/media/js/dataTables.bootstrap.js" afterPath="$PROJECT_DIR$/bower_components/datatables/media/js/dataTables.bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/datatables/media/js/dataTables.bootstrap.min.js" afterPath="$PROJECT_DIR$/bower_components/datatables/media/js/dataTables.bootstrap.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/datatables/media/js/dataTables.foundation.js" afterPath="$PROJECT_DIR$/bower_components/datatables/media/js/dataTables.foundation.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/datatables/media/js/dataTables.foundation.min.js" afterPath="$PROJECT_DIR$/bower_components/datatables/media/js/dataTables.foundation.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/datatables/media/js/dataTables.jqueryui.js" afterPath="$PROJECT_DIR$/bower_components/datatables/media/js/dataTables.jqueryui.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/datatables/media/js/dataTables.jqueryui.min.js" afterPath="$PROJECT_DIR$/bower_components/datatables/media/js/dataTables.jqueryui.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/datatables/media/js/jquery.dataTables.js" afterPath="$PROJECT_DIR$/bower_components/datatables/media/js/jquery.dataTables.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/datatables/media/js/jquery.dataTables.min.js" afterPath="$PROJECT_DIR$/bower_components/datatables/media/js/jquery.dataTables.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/jquery/.bower.json" afterPath="$PROJECT_DIR$/bower_components/jquery/.bower.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/app.php" afterPath="$PROJECT_DIR$/config/app.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/html/dialog/marks.template.html" afterPath="$PROJECT_DIR$/public/assets/html/dialog/marks.template.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/partials/navbar.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/partials/navbar.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/seatingchart/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/seatingchart/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/seats/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/seats/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/material.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/material.blade.php" />
     </list>
     <ignored path="kristen2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -187,96 +28,104 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <file leaf-file-name="composer.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/composer.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.125">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state vertical-scroll-proportion="-3.5416667">
+              <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReportsController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ReportsController.php">
+      <file leaf-file-name=".env.example" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.env.example">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.5">
-              <caret line="64" column="28" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
-              <folding>
-                <element signature="e#40#58#0#PHP" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2015_10_04_195129_create_classes_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2015_10_04_195129_create_classes_table.php">
+      <file leaf-file-name="master.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/layouts/master.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
+            <state vertical-scroll-proportion="1.125">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="selectRange.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/reports/selectRange.blade.php">
+      <file leaf-file-name="navbar.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/partials/navbar.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.875">
-              <caret line="19" column="102" selection-start-line="19" selection-start-column="102" selection-end-line="19" selection-end-column="102" />
+            <state vertical-scroll-proportion="-8.235294">
+              <caret line="52" column="14" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Classroom.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Classroom.php">
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/seatingchart/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-23.708334">
-              <caret line="82" column="17" selection-start-line="82" selection-start-column="17" selection-end-line="82" selection-end-column="17" />
+            <state vertical-scroll-proportion="-40.0">
+              <caret line="136" column="98" selection-start-line="136" selection-start-column="98" selection-end-line="136" selection-end-column="98" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Excel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/maatwebsite/excel/src/Maatwebsite/Excel/Facades/Excel.php">
+      <file leaf-file-name="sprite.defs.svg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/img/icons/navigation/defs/svg/sprite.defs.svg">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="30" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
+              <caret line="0" column="729" selection-start-line="0" selection-start-column="719" selection-end-line="0" selection-end-column="729" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Student.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Student.php">
+      <file leaf-file-name="sprite.defs.svg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/img/icons/actions/defs/svg/sprite.defs.svg">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.958334">
-              <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+            <state vertical-scroll-proportion="41.867924">
+              <caret line="0" column="21598" selection-start-line="0" selection-start-column="21598" selection-end-line="0" selection-end-column="21598" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StudentsController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Json/StudentsController.php">
+      <file leaf-file-name="svg-sprite-action.svg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/img/icons/svg-sprite-action.svg">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.625">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="svg-sprite-alert.svg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/img/icons/svg-sprite-alert.svg">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="173" selection-start-line="0" selection-start-column="173" selection-end-line="0" selection-end-column="173" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="material.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/layouts/material.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.2840909">
+              <caret line="16" column="84" selection-start-line="16" selection-start-column="84" selection-end-line="16" selection-end-column="84" />
               <folding>
-                <element signature="e#45#58#0#PHP" expanded="true" />
+                <element signature="n#style#0;n#md-icon#0;n#md-button#1;n#div#0;n#md-toolbar#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/excel/tests/test.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25957972">
-              <caret line="14" column="14" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -289,9 +138,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/admin/marks/create.blade.php" />
-        <option value="$PROJECT_DIR$/app/Jobs/MarksFormField.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/MarkRequest.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_11_08_050846_create_mark_student_pivot_table.php" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/database/migrations/2015_11_08_050817_MarksTable.php" />
@@ -307,7 +153,6 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Json/ClassroomController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Json/StudentController.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/master.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/partials/navbar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/students/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/classrooms/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/marks/index.blade.php" />
@@ -325,10 +170,8 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/SeatsController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/reports/selectClassrooms.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/reports/selectClassroom.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/seatingchart/index.blade.php" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/StudentsController.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/config/excel.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/excel/test.blade.php/test.blade.php" />
@@ -340,6 +183,12 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_3" />
         <option value="$PROJECT_DIR$/app/Classroom.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/excel/tests/test.blade.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/resources/views/admin/partials/navbar.blade.php" />
+        <option value="$PROJECT_DIR$/public/assets/img/icons/actions/defs/svg/sprite.defs.svg" />
+        <option value="$PROJECT_DIR$/resources/views/admin/seatingchart/index.blade.php" />
+        <option value="$PROJECT_DIR$/public/assets/img/icons/navigation/defs/svg/sprite.defs.svg" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/material.blade.php" />
       </list>
     </option>
   </component>
@@ -387,6 +236,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -401,7 +251,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="kristen2" />
+              <option name="myItemId" value="classroomsSeatingChart" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -411,29 +261,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="kristen2" />
+              <option name="myItemId" value="classroomsSeatingChart" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="storage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kristen2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kristen2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="storage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exports" />
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -443,25 +275,183 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="classroomsSeatingChart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
               <option name="myItemId" value="kristen2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classroomsSeatingChart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kristen2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classroomsSeatingChart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="icons" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kristen2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classroomsSeatingChart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="icons" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="navigation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="defs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kristen2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classroomsSeatingChart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="icons" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alert" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="defs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kristen2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classroomsSeatingChart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="icons" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="actions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="defs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="svg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kristen2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classroomsSeatingChart" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kristen2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kristen2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -479,7 +469,6 @@
         </subPane>
         <subPane subId="Tests" />
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -555,24 +544,24 @@
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2912088" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2948718" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43107477" sideWeight="0.502849" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32792583" sideWeight="0.497151" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24969475" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3410943" sideWeight="0.497151" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3282887" sideWeight="0.497151" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -625,27 +614,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/assets/img/icons/svg-sprite-hardware.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="74" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="9969" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/img/icons/svg-sprite-action.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/img/icons/svg-sprite-alert.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="173" selection-start-line="0" selection-start-column="173" selection-end-line="0" selection-end-column="173" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/img/icons/svg-sprite-device.svg">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -734,7 +702,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -809,20 +776,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/material.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/master.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -851,13 +804,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/seatingchart/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40697673">
-          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/seats/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -872,25 +818,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.235294">
-          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Seat.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="42" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/nesbot/carbon/src/Carbon/Carbon.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="6" selection-start-line="51" selection-start-column="6" selection-end-line="51" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -905,21 +836,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/maatwebsite/excel/src/Maatwebsite/Excel/Excel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.5216316">
-          <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.125">
+        <state vertical-scroll-proportion="0.0">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
@@ -927,7 +849,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Json/StudentsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.625">
+        <state vertical-scroll-proportion="0.0">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="e#45#58#0#PHP" expanded="true" />
@@ -939,7 +861,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="2579" selection-start-line="0" selection-start-column="2579" selection-end-line="0" selection-end-column="2579" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -953,7 +874,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ReportsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.5">
+        <state vertical-scroll-proportion="0.0">
           <caret line="64" column="28" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
           <folding>
             <element signature="e#40#58#0#PHP" expanded="true" />
@@ -961,17 +882,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/maatwebsite/excel/src/Maatwebsite/Excel/Facades/Excel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="30" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Student.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.958334">
+        <state vertical-scroll-proportion="0.0">
           <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
           <folding />
         </state>
@@ -979,7 +892,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Classroom.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-23.708334">
+        <state vertical-scroll-proportion="0.0">
           <caret line="82" column="17" selection-start-line="82" selection-start-column="17" selection-end-line="82" selection-end-column="17" />
           <folding />
         </state>
@@ -987,7 +900,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/reports/selectRange.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.875">
+        <state vertical-scroll-proportion="0.0">
           <caret line="19" column="102" selection-start-line="19" selection-start-column="102" selection-end-line="19" selection-end-column="102" />
           <folding />
         </state>
@@ -995,9 +908,91 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/excel/tests/test.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25957972">
+        <state vertical-scroll-proportion="-8.75">
           <caret line="14" column="14" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.5416667">
+          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env.example">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/master.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.125">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/img/icons/svg-sprite-alert.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="173" selection-start-line="0" selection-start-column="173" selection-end-line="0" selection-end-column="173" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/img/icons/actions/defs/svg/sprite.defs.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="41.867924">
+          <caret line="0" column="21598" selection-start-line="0" selection-start-column="21598" selection-end-line="0" selection-end-column="21598" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/img/icons/svg-sprite-action.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/img/icons/navigation/defs/svg/sprite.defs.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="729" selection-start-line="0" selection-start-column="719" selection-end-line="0" selection-end-column="729" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/seatingchart/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-40.0">
+          <caret line="136" column="98" selection-start-line="136" selection-start-column="98" selection-end-line="136" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/partials/navbar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.235294">
+          <caret line="52" column="14" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/material.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2840909">
+          <caret line="16" column="84" selection-start-line="16" selection-start-column="84" selection-end-line="16" selection-end-column="84" />
+          <folding>
+            <element signature="n#style#0;n#md-icon#0;n#md-button#1;n#div#0;n#md-toolbar#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

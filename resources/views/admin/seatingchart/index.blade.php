@@ -19,40 +19,7 @@
                 </div>
             </div>
         </md-content>
-        <md-fab-toolbar md-open="demo.isOpen" count="demo.count"
-                        md-direction="@{{demo.selectedDirection}}">
-            <md-fab-trigger class="align-with-text">
-                <md-button aria-label="menu" class="md-fab md-primary">
-                    <md-icon md-svg-src="navigation:menu"></md-icon>
-                </md-button>
-            </md-fab-trigger>
-            <md-toolbar>
-                <md-fab-actions class="md-toolbar-tools">
-                    <md-button aria-label="comment" class="md-icon-button">
-                        <md-icon md-svg-src="communication:comment"></md-icon>
-                        <md-tooltip md-direction="top">
-                            Classrooms
-                        </md-tooltip>
 
-                    </md-button>
-                    <md-button aria-label="label" class="md-icon-button">
-                        <md-icon md-svg-src="action:label"></md-icon>
-                        <md-tooltip md-direction="top">
-                            Home
-                        </md-tooltip>
-
-                    </md-button>
-                    <md-button aria-label="photo" class="md-icon-button">
-                        <md-tooltip>
-                            Reports
-                        </md-tooltip>
-                        <md-icon md-svg-src="editor:insert_photo">
-
-                        </md-icon>
-                    </md-button>
-                </md-fab-actions>
-            </md-toolbar>
-        </md-fab-toolbar>
     </section>
 @endsection
 
@@ -156,7 +123,7 @@
         function config($mdIconProvider) {
             // Configure URLs for icons specified by [set:]id.
             $mdIconProvider
-                    .iconSet('action', '/assets/img/icons/svg-sprite-action.svg')   // Register a named icon set of SVGs
+                    .iconSet('action', '/assets/img/icons/actions/defs/svg/sprite.defs.svg')   // Register a named icon set of SVGs
                     .iconSet('av', '/assets/img/icons/svg-sprite-av.svg')   // Register a named icon set of SVGs
                     .iconSet('alert', '/assets/img/icons/svg-sprite-alert.svg')   // Register a named icon set of SVGs
                     .iconSet('communication', '/assets/img/icons/svg-sprite-communication.svg')   // Register a named icon set of SVGs
@@ -167,7 +134,7 @@
                     .iconSet('hardware', '/assets/img/icons/svg-sprite-hardware.svg')   // Register a named icon set of SVGs
                     .iconSet('image', '/assets/img/icons/svg-sprite-image.svg')   // Register a named icon set of SVGs
                     .iconSet('maps', '/assets/img/icons/svg-sprite-maps.svg')   // Register a named icon set of SVGs
-                    .iconSet('navigation', '/assets/img/icons/svg-sprite-navigation.svg')   // Register a named icon set of SVGs
+                    .iconSet('navigation', '/assets/img/icons/navigation/defs/svg/sprite.defs.svg')   // Register a named icon set of SVGs
                     .iconSet('notification', '/assets/img/icons/svg-sprite-notification.svg')   // Register a named icon set of SVGs
                     .iconSet('social', '/assets/img/icons/svg-sprite-social.svg')   // Register a named icon set of SVGs
                     .iconSet('toggle', '/assets/img/icons/svg-sprite-togge.svg'); // Register a named icon set of SVGs

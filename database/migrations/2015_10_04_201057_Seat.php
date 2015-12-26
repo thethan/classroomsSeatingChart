@@ -19,9 +19,9 @@ class Seat extends Migration
             $table->integer('table_id');
             $table->timestamps();
 
-            $table->foreign('table_id')
-                ->references('id')->on('tables')
-                ->onDelete('cascade');
+//            $table->foreign('table_id')
+//                ->references('id')->on('tables')
+//                ->onDelete('cascade');
         });
     }
 

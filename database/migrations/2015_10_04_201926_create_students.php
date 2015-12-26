@@ -12,12 +12,7 @@ class CreateStudents extends Migration
      */
     public function up()
     {
-        Schema::create('marks', function(Blueprint $table) {
-            $table->increments('id');
-            $table->string('name')->unique();
-            $table->timestamps();
 
-        });
         //
         Schema::create('students', function(Blueprint $table) {
             $table->increments('id');
@@ -45,6 +40,5 @@ class CreateStudents extends Migration
     {
         Schema::drop('students');
 
-        Schema::drop('markes');
     }
 }

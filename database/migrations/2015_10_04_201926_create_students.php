@@ -21,13 +21,13 @@ class CreateStudents extends Migration
             $table->integer('seat_id')->nullable();
             $table->timestamps();
 
-            $table->foreign('classroom_id')
-                ->references('id')->on('classrooms')
-                ->onDelete('cascade');
-
-            $table->foreign('seat_id')
-                ->references('id')->on('seats')
-                ->onDelete('cascade');
+//            $table->foreign('classroom_id')
+//                ->references('id')->on('classrooms')
+//                ->onDelete('cascade');
+//
+//            $table->foreign('seat_id')
+//                ->references('id')->on('seats')
+//                ->onDelete('cascade');
         });
     }
 

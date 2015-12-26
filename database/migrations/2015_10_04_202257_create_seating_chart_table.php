@@ -18,13 +18,13 @@ class CreateSeatingChartTable extends Migration
             $table->integer('seatingchart_id');
         });
 
-        Schema::create('seatingcharts', function(Blueprint $table){
-            $table->increments('id');
-            $table->integer('classroom_id');
-
-            $table->foreign('classroom_id')
-                ->references('id')->on('classrooms')
-                ->onDelete('cascade');
+//        Schema::create('seatingcharts', function(Blueprint $table){
+//            $table->increments('id');
+//            $table->integer('classroom_id');
+//
+//            $table->foreign('classroom_id')
+//                ->references('id')->on('classrooms')
+//                ->onDelete('cascade');
         });
 
         Schema::create('seat_seatingcharts', function(Blueprint $table){
@@ -32,13 +32,13 @@ class CreateSeatingChartTable extends Migration
             $table->integer('seat_id');
             $table->integer('seatingchart_id');
 
-            $table->foreign('seat_id')
-                ->references('id')->on('seats')
-                ->onDelete('cascade');
-
-            $table->foreign('seatingchart_id')
-                ->references('id')->on('seatingcharts')
-                ->onDelete('cascade');
+//            $table->foreign('seat_id')
+//                ->references('id')->on('seats')
+//                ->onDelete('cascade');
+//
+//            $table->foreign('seatingchart_id')
+//                ->references('id')->on('seatingcharts')
+//                ->onDelete('cascade');
 
         });
 
@@ -49,14 +49,14 @@ class CreateSeatingChartTable extends Migration
             $table->increments('id');
             $table->integer('seat_id');
             $table->integer('student_id');
-
-            $table->foreign('seat_id')
-                ->references('id')->on('seats')
-                ->onDelete('cascade');
-
-            $table->foreign('student_id')
-                ->references('id')->on('students')
-                ->onDelete('cascade');
+//
+//            $table->foreign('seat_id')
+//                ->references('id')->on('seats')
+//                ->onDelete('cascade');
+//
+//            $table->foreign('student_id')
+//                ->references('id')->on('students')
+//                ->onDelete('cascade');
 
         });
 
@@ -67,18 +67,18 @@ class CreateSeatingChartTable extends Migration
             $table->integer('classroom_id');
             $table->integer('seat_id');
             $table->timestamps();
-
-            $table->foreign('classroom_id')
-                ->references('id')->on('classrooms')
-                ->onDelete('cascade');
-
-            $table->foreign('student_id')
-                ->references('id')->on('students')
-                ->onDelete('cascade');
-
-            $table->foreign('seat_id')
-                ->references('id')->on('seats')
-                ->onDelete('cascade');
+//
+//            $table->foreign('classroom_id')
+//                ->references('id')->on('classrooms')
+//                ->onDelete('cascade');
+//
+//            $table->foreign('student_id')
+//                ->references('id')->on('students')
+//                ->onDelete('cascade');
+//
+//            $table->foreign('seat_id')
+//                ->references('id')->on('seats')
+//                ->onDelete('cascade');
         });
     }
 

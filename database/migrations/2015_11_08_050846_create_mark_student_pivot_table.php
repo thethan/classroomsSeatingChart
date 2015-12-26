@@ -18,13 +18,13 @@ class CreateMarkStudentPivotTable extends Migration
             $table->integer('student_id');
             $table->timestamps();
 
-            $table->foreign('mark_id')
-                ->references('id')->on('marks')
-                ->onDelete('cascade');
-
-            $table->foreign('student_id')
-                ->references('id')->on('students')
-                ->onDelete('cascade');
+//            $table->foreign('mark_id')
+//                ->references('id')->on('marks')
+//                ->onDelete('cascade');
+//
+//            $table->foreign('student_id')
+//                ->references('id')->on('students')
+//                ->onDelete('cascade');
         });
     }
 

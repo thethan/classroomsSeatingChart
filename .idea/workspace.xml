@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b44fbd4-0046-4597-be69-0a2b7b6e6e57" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2015_10_04_201926_create_students.php" afterPath="$PROJECT_DIR$/database/migrations/2015_10_04_201926_create_students.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2015_10_04_202257_create_seating_chart_table.php" afterPath="$PROJECT_DIR$/database/migrations/2015_10_04_202257_create_seating_chart_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2015_11_08_050846_create_mark_student_pivot_table.php" afterPath="$PROJECT_DIR$/database/migrations/2015_11_08_050846_create_mark_student_pivot_table.php" />
     </list>
     <ignored path="kristen2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -74,11 +75,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2015_10_04_201926_create_students.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2015_10_04_201926_create_students.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/migrations/2015_10_04_201926_create_students.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4777563">
+            <state vertical-scroll-proportion="-10.291667">
               <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="29" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2015_10_04_202257_create_seating_chart_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2015_10_04_202257_create_seating_chart_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.0">
+              <caret line="26" column="40" selection-start-line="20" selection-start-column="9" selection-end-line="26" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -87,8 +98,8 @@
       <file leaf-file-name="2015_11_08_050846_create_mark_student_pivot_table.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/migrations/2015_11_08_050846_create_mark_student_pivot_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.0">
-              <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+            <state vertical-scroll-proportion="-9.041667">
+              <caret line="26" column="40" selection-start-line="20" selection-start-column="9" selection-end-line="26" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -104,20 +115,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Blueprint.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.583333">
-              <caret line="450" column="20" selection-start-line="450" selection-start-column="20" selection-end-line="450" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2015_11_16_014925_TallyTable.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="2015_11_16_014925_TallyTable.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/database/migrations/2015_11_16_014925_TallyTable.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
+            <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -132,8 +133,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/assets/html/dialog/fillseat.template.html" />
-        <option value="$PROJECT_DIR$/resources/views/admin/students/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/students/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/students/_form.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/StudentRequest.php" />
@@ -183,6 +182,8 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_11_08_050817_create_marks_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_10_04_201926_create_students.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2015_10_04_202257_create_seating_chart_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2015_11_08_050846_create_mark_student_pivot_table.php" />
       </list>
     </option>
   </component>
@@ -886,26 +887,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2015_10_04_202257_create_seating_chart_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.2916666">
-          <caret line="54" column="20" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.583333">
           <caret line="450" column="20" selection-start-line="450" selection-start-column="20" selection-end-line="450" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2015_11_16_014925_TallyTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -934,22 +919,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2015_11_08_050846_create_mark_student_pivot_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.0">
-          <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2015_11_08_050817_create_marks_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.5">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2015_10_04_195129_create_classes_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -968,8 +937,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2015_10_04_201926_create_students.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4777563">
+        <state vertical-scroll-proportion="-10.291667">
           <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="29" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2015_10_04_202257_create_seating_chart_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.0">
+          <caret line="26" column="40" selection-start-line="20" selection-start-column="9" selection-end-line="26" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2015_11_08_050817_create_marks_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2015_11_08_050846_create_mark_student_pivot_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.041667">
+          <caret line="26" column="40" selection-start-line="20" selection-start-column="9" selection-end-line="26" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2015_11_16_014925_TallyTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

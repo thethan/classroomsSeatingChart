@@ -3,7 +3,7 @@
 @section('content')
     <div class="row">
         <div class="col-sm-12">
-            <a href="create" class="btn btn-primary pull-right">Create Table</a>
+            <a href="/admin/tables/create" class="btn btn-primary pull-right">Create Table</a>
         </div>
     </div>
     <table id="tables">

@@ -37,6 +37,8 @@ Route::group(['prefix' => 'admin'], function(){
 
     Route::resource('/tables/{tableId}/seats', 'SeatsController');
 
+    // Route::post('/tables/{tableId}/seats/create', ['uses' => 'SeatsController@store'])
+
     Route::resource('classrooms/{classroomId}/students', 'StudentsController');
 
     Route::get('assign/{classroomId}', 'Classrooms@assignSeatingChart');

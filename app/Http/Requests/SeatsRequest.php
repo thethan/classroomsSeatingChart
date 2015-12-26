@@ -13,7 +13,7 @@ class SeatsRequest extends Request
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -25,7 +25,7 @@ class SeatsRequest extends Request
     {
         return [
             'number' => 'required',
-            'table_id' => 'required|int'
+            'table_id' => 'int'
         ];
     }
 }

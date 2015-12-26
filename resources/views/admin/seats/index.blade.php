@@ -3,7 +3,7 @@
 @section('content')
     <div class="row">
         <div class="col-sm-12">
-            <a href="create" class="btn btn-primary pull-right">Create Table</a>
+            <a href="seats/create" class="btn btn-primary pull-right">Create Seat</a>
         </div>
     </div>
     <h2>{{ $color }}</h2>

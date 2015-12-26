@@ -41,7 +41,7 @@ class MarksController extends Controller
     public function store(MarkRequest $request)
     {
 
-        $response = Mark::create($request->only('name'));
+        $mark = Mark::create($request->only('name'));
 
         return redirect('/admin/marks')
             ->withSuccess("The mark '$mark->name' was created");

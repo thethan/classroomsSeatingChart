@@ -35,12 +35,12 @@ class SeatsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($tableId)
     {
         $data = $this->dispatch(new SeatFormFields());
 
 
-        return view('admin.seats.create', $data);
+        return view('admin.seats.create', $data)->with('tableId', $tableId);
 
     }
 
@@ -53,10 +53,13 @@ class SeatsController extends Controller
     public function store(SeatsRequest $request)
     {
         $seat = new Seat();
+
+
         foreach(array_keys($this->fields) as $field)
         {
             $seat->$field = $request->get($field);
         }
+
         $seat->save();
 
         return redirect('/admin/tables/'.$seat->table_id.'/seats')

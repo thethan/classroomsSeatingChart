@@ -18,9 +18,9 @@ class CreateSeatingChartTable extends Migration
             $table->integer('seatingchart_id');
         });
 
-//        Schema::create('seatingcharts', function(Blueprint $table){
-//            $table->increments('id');
-//            $table->integer('classroom_id');
+        Schema::create('seatingcharts', function(Blueprint $table){
+            $table->increments('id');
+            $table->integer('classroom_id');
 //
 //            $table->foreign('classroom_id')
 //                ->references('id')->on('classrooms')

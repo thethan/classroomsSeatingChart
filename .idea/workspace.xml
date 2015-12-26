@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7b44fbd4-0046-4597-be69-0a2b7b6e6e57" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2015_10_04_202257_create_seating_chart_table.php" afterPath="$PROJECT_DIR$/database/migrations/2015_10_04_202257_create_seating_chart_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2015_11_08_050846_create_mark_student_pivot_table.php" afterPath="$PROJECT_DIR$/database/migrations/2015_11_08_050846_create_mark_student_pivot_table.php" />
     </list>
     <ignored path="kristen2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -85,11 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2015_10_04_202257_create_seating_chart_table.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="2015_10_04_202257_create_seating_chart_table.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/database/migrations/2015_10_04_202257_create_seating_chart_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.0">
-              <caret line="26" column="40" selection-start-line="20" selection-start-column="9" selection-end-line="26" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.52224374">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="22" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -115,10 +114,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2015_11_16_014925_TallyTable.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2015_11_16_014925_TallyTable.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/migrations/2015_11_16_014925_TallyTable.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -182,8 +181,8 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_11_08_050817_create_marks_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_10_04_201926_create_students.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2015_10_04_202257_create_seating_chart_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_11_08_050846_create_mark_student_pivot_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2015_10_04_202257_create_seating_chart_table.php" />
       </list>
     </option>
   </component>
@@ -943,14 +942,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2015_10_04_202257_create_seating_chart_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.0">
-          <caret line="26" column="40" selection-start-line="20" selection-start-column="9" selection-end-line="26" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2015_11_08_050817_create_marks_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.5">
@@ -971,6 +962,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2015_10_04_202257_create_seating_chart_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.52224374">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="22" selection-end-column="44" />
           <folding />
         </state>
       </provider>

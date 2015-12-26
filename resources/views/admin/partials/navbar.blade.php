@@ -11,8 +11,8 @@
             </button>
             <a class="navbar-brand" href="#">Ursenbach's Classes</a>
         </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
+        @if( Auth::user())
+                <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
@@ -51,7 +51,8 @@
                 </li>
             </ul>--}}
         </div>
-        <!-- /.navbar-collapse -->
+        @endif
+                <!-- /.navbar-collapse -->
     </div>
     <!-- /.container-fluid -->
 </nav>

@@ -25,7 +25,7 @@
                         <li>{!!  link_to_action('MarksController@index', 'Marks') !!}</li>
 
                         <li role="separator" class="divider"></li>
-                        <li>{!!  link_to_action('SeatsController@index', 'Reports') !!}</li>
+                        <li>{!!  link_to_action('ReportsController@index', 'Reports') !!}</li>
 
                     </ul>
                 </li>

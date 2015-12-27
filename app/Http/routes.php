@@ -26,7 +26,9 @@ Route::get('/', function () {
 
 
 //Put under Middleware
-Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
+Route::group(['prefix' => 'admin',
+//    'middleware' => 'auth'
+], function(){
 
     Route::resource('/classrooms','Classrooms');
 

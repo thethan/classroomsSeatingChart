@@ -102,7 +102,7 @@ class Student extends Model
         } else {
             return $query->whereBetween('created_at', [Carbon::today(), Carbon::tomorrow()])
                 ->groupBy('mark_id')
-                ->select(DB::raw('count(mark_id) as mark_count, *'))
+                ->select(DB::raw('*, count(mark_id) as mark_count'))
                 ->get();
         }
     }
